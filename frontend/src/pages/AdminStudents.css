@@ -34,7 +34,7 @@
   padding: 1.15rem 1.35rem;
 
   background: #ffffff;
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 18px;
 
   box-shadow: 0 6px 20px rgba(37, 41, 45, 0.035);
@@ -75,7 +75,7 @@
 .admin-students-x7k2-title {
   margin: 0;
 
-  color: #2d3436;
+  color: #1E293B;
 
   font-size: 1rem;
   font-weight: 800;
@@ -87,7 +87,7 @@
 .admin-students-x7k2-description {
   margin: 0.25rem 0 0;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.84rem;
   line-height: 1.8;
@@ -135,7 +135,7 @@
 
   background: #ffffff;
 
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 22px;
 
   box-shadow: 0 8px 25px rgba(37, 41, 45, 0.04);
@@ -207,7 +207,7 @@
 .admin-students-x7k2-content-header p {
   margin: 0.35rem 0 0;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.84rem;
   line-height: 1.8;
@@ -224,7 +224,7 @@
 
   padding: 0.4rem 0.75rem;
 
-  background: #fff1ef;
+  background: #EEF2FF;
   color: var(--primary);
 
   border: 1px solid rgba(231, 76, 60, 0.15);
@@ -268,7 +268,7 @@
   position: absolute;
   right: 0.9rem;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   pointer-events: none;
 
@@ -284,9 +284,9 @@
   padding: 0.65rem 2.5rem 0.65rem 2.5rem;
 
   background: #ffffff;
-  color: #2d3436;
+  color: #1E293B;
 
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
 
   font-family: inherit;
@@ -335,10 +335,10 @@
 
   padding: 0;
 
-  background: #f8f9fa;
-  color: #7f8c8d;
+  background: #F8FAFC;
+  color: #64748B;
 
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
 
   cursor: pointer;
@@ -352,7 +352,7 @@
 }
 
 .admin-students-x7k2-clear-search:hover {
-  background: #fff1ef;
+  background: #EEF2FF;
   color: var(--primary);
   border-color: rgba(231, 76, 60, 0.15);
 }
@@ -374,7 +374,7 @@
 
   margin-bottom: 0.9rem;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.78rem;
 }
@@ -418,7 +418,7 @@
 
   background: #ffffff;
 
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
 }
 
@@ -444,20 +444,20 @@
 }
 
 .admin-students-x7k2-table thead {
-  background: #f8f9fa;
+  background: #F8FAFC;
 }
 
 .admin-students-x7k2-table th {
   padding: 0.95rem 1rem;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.78rem;
   font-weight: 800;
 
   white-space: nowrap;
 
-  border-bottom: 1px solid #eceff3;
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .admin-students-x7k2-table td {
@@ -562,7 +562,7 @@
 
   padding: 0.3rem 0.55rem;
 
-  background: #f1f2f6;
+  background: #F1F5F9;
   color: #687177;
 
   border: 1px solid #e4e7eb;
@@ -663,15 +663,15 @@
 }
 
 .admin-students-x7k2-status-paid {
-  background: #edf8f1;
-  color: #2e8b57;
+  background: #ECFDF5;
+  color: #10B981;
 
-  border: 1px solid #d9f0e1;
+  border: 1px solid #D1FAE5;
 }
 
 .admin-students-x7k2-status-unassigned {
-  background: #f1f2f6;
-  color: #7f8c8d;
+  background: #F1F5F9;
+  color: #64748B;
 
   border: 1px solid #e4e7eb;
 }
@@ -702,7 +702,7 @@
     #fffafa 100%
   );
 
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
 
   box-shadow: 0 5px 18px rgba(37, 41, 45, 0.035);
@@ -918,7 +918,7 @@
 
   padding: 0.5rem 0.85rem;
 
-  background: #fff1ef;
+  background: #EEF2FF;
   color: var(--primary);
 
   border: 1px solid rgba(231, 76, 60, 0.15);
@@ -1076,13 +1076,13 @@
 
   padding: 2rem;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   text-align: center;
 }
 
 .admin-students-x7k2-empty strong {
-  color: #2d3436;
+  color: #1E293B;
 
   font-size: 0.95rem;
   font-weight: 800;
@@ -1100,7 +1100,7 @@
 
   padding: 0.5rem 0.9rem;
 
-  background: #fff1ef;
+  background: #EEF2FF;
   color: var(--primary);
 
   border: 1px solid rgba(231, 76, 60, 0.15);
@@ -1197,7 +1197,7 @@
 
 .admin-students-x7k2-page-btn:hover:not(:disabled),
 .admin-students-x7k2-page-number:hover:not(.active) {
-  background: #f8f9fa;
+  background: #F8FAFC;
   border-color: #dce0e3;
 }
 
@@ -1839,7 +1839,7 @@
   .admin-students-x7k2-student-card:hover {
     transform: none;
 
-    border-color: #eceff3;
+    border-color: #E2E8F0;
 
     box-shadow: 0 5px 18px rgba(37, 41, 45, 0.035);
   }
@@ -1851,7 +1851,7 @@
   .admin-students-x7k2-card-action:hover {
     transform: none;
 
-    background: #fff1ef;
+    background: #EEF2FF;
   }
 }
 

@@ -1510,7 +1510,7 @@ export default function SecretaryExams() {
                       className="exam-modal-icon-badge"
                       style={{
                         background:
-                          "linear-gradient(135deg, #3578c8, #205493)",
+                          "linear-gradient(135deg, #0284C7, #205493)",
                       }}
                     >
                       <Info size={22} />

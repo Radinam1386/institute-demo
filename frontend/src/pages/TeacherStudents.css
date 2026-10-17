@@ -20,7 +20,7 @@
   --ts-border-light: #f2f2f2;
 
   --ts-white: #ffffff;
-  --ts-surface: #fafafa;
+  --ts-surface: #F8FAFC;
 
   --ts-green: #16845b;
   --ts-green-soft: #ecf9f3;
@@ -1166,7 +1166,7 @@
 
     padding: 0.65rem;
 
-    background: #fafafa;
+    background: #F8FAFC;
 
     border: 1px solid #f0f0f0;
 

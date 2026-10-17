@@ -1,25 +1,25 @@
 .stat-card-p {
 
-  --exam-red: #e74c3c;
-  --exam-red-dark: #c0392b;
-  --exam-red-light: #fdecea;
+  --exam-red: #4F46E5;
+  --exam-red-dark: #4338CA;
+  --exam-red-light: #EEF2FF;
   --exam-red-border: rgba(231, 76, 60, 0.18);
   --exam-red-border-hover: rgba(231, 76, 60, 0.40);
 
-  --exam-blue: #3498db;
+  --exam-blue: #0EA5E9;
   --exam-blue-dark: #2474a8;
   --exam-blue-light: #eaf4fb;
   --exam-blue-border: rgba(52, 152, 219, 0.18);
   --exam-blue-border-hover: rgba(52, 152, 219, 0.40);
 
-  --exam-green: #27ae60;
+  --exam-green: #059669;
   --exam-green-dark: #1e8e4e;
   --exam-green-light: #eaf8f0;
   --exam-green-border: rgba(39, 174, 96, 0.18);
   --exam-green-border-hover: rgba(39, 174, 96, 0.40);
 
-  --exam-orange: #f39c12;
-  --exam-orange-dark: #e67e22;
+  --exam-orange: #F59E0B;
+  --exam-orange-dark: #D97706;
   --exam-orange-light: #fff7e8;
   --exam-orange-border: rgba(243, 156, 18, 0.18);
   --exam-orange-border-hover: rgba(243, 156, 18, 0.40);
@@ -292,8 +292,8 @@
   background:
     linear-gradient(
       135deg,
-      #f05b4b,
-      #c0392b
+      #6366F1,
+      #4338CA
     );
 
   box-shadow:
@@ -325,8 +325,8 @@
   background:
     linear-gradient(
       135deg,
-      #74c7f4,
-      #3498db
+      #38BDF8,
+      #0EA5E9
     );
 
   box-shadow:
@@ -344,7 +344,7 @@
   background:
     linear-gradient(
       135deg,
-      #42c878,
+      #34D399,
       #1e8e4e
     );
 
@@ -358,8 +358,8 @@
   background:
     linear-gradient(
       135deg,
-      #68d391,
-      #27ae60
+      #6EE7B7,
+      #059669
     );
 
   box-shadow:
@@ -377,8 +377,8 @@
   background:
     linear-gradient(
       135deg,
-      #f6b840,
-      #e67e22
+      #FBBF24,
+      #D97706
     );
 
   box-shadow:
@@ -391,8 +391,8 @@
   background:
     linear-gradient(
       135deg,
-      #f8c969,
-      #f39c12
+      #FCD34D,
+      #F59E0B
     );
 
   box-shadow:
@@ -410,8 +410,8 @@
   background:
     linear-gradient(
       135deg,
-      #ff8c7f,
-      #e74c3c
+      #818CF8,
+      #4F46E5
     );
 
   box-shadow:

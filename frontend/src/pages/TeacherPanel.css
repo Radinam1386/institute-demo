@@ -5,20 +5,20 @@
 ========================================================= */
 
 .teacher-panel-x7k2-root {
-  --teacher-panel-x7k2-red: #e74c3c;
-  --teacher-panel-x7k2-red-dark: #c0392b;
-  --teacher-panel-x7k2-red-light: #fff1f1;
+  --teacher-panel-x7k2-red: #4F46E5;
+  --teacher-panel-x7k2-red-dark: #4338CA;
+  --teacher-panel-x7k2-red-light: #EEF2FF;
   --teacher-panel-x7k2-red-soft: #fdf5f4;
   --teacher-panel-x7k2-red-border: rgba(231, 76, 60, 0.18);
 
-  --teacher-panel-x7k2-green: #27ae60;
+  --teacher-panel-x7k2-green: #059669;
   --teacher-panel-x7k2-green-light: #ecf9f1;
 
-  --teacher-panel-x7k2-blue: #3498db;
-  --teacher-panel-x7k2-amber: #f39c12;
+  --teacher-panel-x7k2-blue: #0EA5E9;
+  --teacher-panel-x7k2-amber: #F59E0B;
   --teacher-panel-x7k2-amber-light: #fff7e8;
 
-  --teacher-panel-x7k2-text: #2d3436;
+  --teacher-panel-x7k2-text: #1E293B;
   --teacher-panel-x7k2-text-soft: #66727d;
   --teacher-panel-x7k2-muted: #98a2aa;
 
@@ -403,7 +403,7 @@
 }
 
 .teacher-panel-x7k2-class-tag--highlight {
-  /* background: linear-gradient(135deg, #fff1ef, #fde2de); */
+  /* background: linear-gradient(135deg, #EEF2FF, #fde2de); */
 
   box-shadow: 0 5px 14px rgba(231, 76, 60, 0.07);
 }

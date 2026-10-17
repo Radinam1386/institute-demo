@@ -174,7 +174,7 @@
 
   color: oklch(25% 0 0);
 
-  background: oklch(98% 0.003 29);
+  background: #F8FAFC;
 
   border: 1px solid oklch(0% 0 0 / 0.08);
   border-radius: 10px;
@@ -205,9 +205,9 @@
 .secretary-student-form-field textarea:focus {
   background: #ffffff;
 
-  border-color: oklch(60% 0.19 29 / 0.45);
+  border-color: rgba(79, 70, 229, 0.45);
 
-  box-shadow: 0 0 0 3px oklch(60% 0.19 29 / 0.08);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08);
 }
 
 .secretary-student-form-field input::placeholder,
@@ -255,7 +255,7 @@
 
   padding: 0;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   background: transparent;
 
@@ -274,7 +274,7 @@
 
 .secretary-student-form-icon-btn:hover {
   color: var(--red-4);
-  background: #fff1ef;
+  background: #EEF2FF;
 }
 
 .secretary-student-form-icon-btn:active {
@@ -354,7 +354,7 @@
 
   color: var(--primary);
 
-  background: #fff1ef;
+  background: #EEF2FF;
 
   border: 1px solid rgba(231, 76, 60, 0.1);
 
@@ -371,7 +371,7 @@
 }
 
 .secretary-student-form-password-tools-title strong {
-  color: #2d3436;
+  color: #1E293B;
 
   font-size: 0.8rem;
   font-weight: 800;
@@ -380,7 +380,7 @@
 }
 
 .secretary-student-form-password-tools-title span {
-  color: #95a5a6;
+  color: #94A3B8;
 
   font-size: 0.68rem;
   font-weight: 500;
@@ -649,7 +649,7 @@
 .secretary-student-form-action-btn.copy .secretary-student-form-action-icon {
   color: var(--primary);
 
-  background: #fff1ef;
+  background: #EEF2FF;
 }
 
 /* Copy Subtitle */
@@ -698,7 +698,7 @@
    ========================================================= */
 
 .secretary-student-form-action-btn.copy.copied {
-  color: #2e8b57;
+  color: #10B981;
 
   background: #f3fbf6;
 
@@ -709,7 +709,7 @@
 
 .secretary-student-form-action-btn.copy.copied
   .secretary-student-form-action-icon {
-  color: #2e8b57;
+  color: #10B981;
 
   background: #e7f7ed;
 
@@ -795,7 +795,7 @@
 }
 
 .secretary-student-form-cancel:hover {
-  background: oklch(97% 0.005 29);
+  background: #F8FAFC;
 
   border-color: oklch(0% 0 0 / 0.13);
 
@@ -827,7 +827,7 @@
 
   cursor: pointer;
 
-  box-shadow: 0 5px 15px oklch(60% 0.19 29 / 0.25);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.25);
 
   transition:
     transform 0.2s ease,

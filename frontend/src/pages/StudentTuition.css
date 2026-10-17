@@ -213,7 +213,7 @@
 
   border-radius: 10px;
 
-  background: oklch(96% 0.02 29);
+  background: #EEF2FF;
 
   color: var(--primary);
 
@@ -540,7 +540,7 @@
 }
 
 .pending-warning-text {
-  color: oklch(48% 0.18 25);
+  color: #4F46E5;
 }
 
 /* =========================================================

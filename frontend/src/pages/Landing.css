@@ -6,21 +6,36 @@
   align-items: center;
   overflow: hidden;
   padding-block: var(--s20) var(--s12);
+  background: linear-gradient(135deg, #312E81, #4338CA);
+  color: #ffffff;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .mesh-gradient {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 40%, oklch(98% .01 22 / .5) 0%, transparent 60%),
-    radial-gradient(circle at 20% 80%, var(--a-100) 0%, transparent 40%),
-    radial-gradient(circle at 80% 20%, var(--a-50) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(99, 102, 241, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(129, 140, 248, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(79, 70, 229, 0.25) 0%, transparent 50%);
   animation: mesh-shift 20s ease-in-out infinite;
 }
 
@@ -33,27 +48,27 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: .4;
+  opacity: .3;
   pointer-events: none;
 }
 
 .orb-1 {
   width: 400px; height: 400px;
-  background: var(--a-200);
+  background: #6366F1;
   top: -10%; right: 10%;
   animation: float 25s ease-in-out infinite;
 }
 
 .orb-2 {
   width: 300px; height: 300px;
-  background: var(--a-300);
+  background: #818CF8;
   bottom: 10%; left: 5%;
   animation: float 30s ease-in-out infinite reverse;
 }
 
 .orb-3 {
   width: 250px; height: 250px;
-  background: var(--a-100);
+  background: #4F46E5;
   top: 40%; right: 40%;
   animation: float 35s ease-in-out infinite;
 }
@@ -78,21 +93,23 @@
   display: inline-flex;
   align-items: center;
   gap: var(--s2);
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--r-full);
   padding: var(--s2) var(--s4);
   font-size: var(--tx-sm);
   font-weight: 600;
-  color: var(--fg-muted);
+  color: #EEF2FF;
   margin-block-end: var(--s6);
-  box-shadow: var(--sh-sm);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
 }
 
 .badge-dot {
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: var(--accent);
+  background: #F59E0B;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
   animation: pulse 2s ease-in-out infinite;
 }
 
@@ -105,14 +122,16 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 900;
   line-height: 1.15;
-  color: var(--fg);
+  color: #ffffff;
   margin-block-end: var(--s6);
 }
 
 .typing-wrap {
   display: inline-block;
-  color: var(--accent);
+  color: #A5B4FC;
   position: relative;
+  border-bottom: 3px solid #F59E0B;
+  padding-bottom: 2px;
 }
 
 .typing-text {
@@ -124,6 +143,7 @@
   display: inline-block;
   animation: blink .9s step-end infinite;
   margin-inline-start: 2px;
+  color: #F59E0B;
 }
 
 @keyframes blink {
@@ -133,7 +153,7 @@
 .hero-desc {
   font-size: var(--tx-lg);
   line-height: 1.8;
-  color: var(--fg-muted);
+  color: #C7D2FE;
   max-width: 560px;
   margin-block-end: var(--s8);
 }
@@ -313,7 +333,8 @@
 .stat-value {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 900;
-  color: var(--accent);
+  color: #4F46E5;
+  font-variant-numeric: tabular-nums;
   line-height: 1;
   margin-block-end: var(--s3);
 }
@@ -338,8 +359,8 @@
 
 .section-badge {
   display: inline-block;
-  background: var(--a-100);
-  color: var(--accent);
+  background: #EEF2FF;
+  color: #3730A3;
   font-size: var(--tx-sm);
   font-weight: 700;
   padding: var(--s2) var(--s4);
@@ -526,7 +547,7 @@
 
 .cta-desc {
   font-size: var(--tx-lg);
-  color: oklch(96% .004 22);
+  color: #EEF2FF;
   line-height: 1.7;
   margin-block-end: var(--s8);
   max-width: 500px;
@@ -546,15 +567,15 @@
 }
 
 .cta-badge {
-  background: oklch(100% 0 0 / .15);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
-  border: 1px solid oklch(100% 0 0 / .2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--r-xl);
   padding: var(--s6);
   display: flex;
   align-items: center;
   gap: var(--s4);
-  box-shadow: 0 8px 32px oklch(0% 0 0 / .2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .cta-badge-icon {
@@ -571,7 +592,7 @@
 
 .cta-badge-desc {
   font-size: var(--tx-sm);
-  color: oklch(94% .006 22);
+  color: #C7D2FE;
 }
 
 /* Reveal animation */

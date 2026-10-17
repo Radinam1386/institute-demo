@@ -4,20 +4,20 @@
 ===================================================== */
 
 .student-exam-result-p {
-  --exam-result-red: #e74c3c;
-  --exam-result-red-dark: #c0392b;
-  --exam-result-red-light: #fff1ef;
+  --exam-result-red: #4F46E5;
+  --exam-result-red-dark: #4338CA;
+  --exam-result-red-light: #EEF2FF;
   --exam-result-red-border: rgba(231, 76, 60, 0.18);
 
-  --exam-result-green: #27ae60;
+  --exam-result-green: #059669;
   --exam-result-green-dark: #1f8a4d;
   --exam-result-green-light: #edf9f2;
 
-  --exam-result-orange: #f39c12;
+  --exam-result-orange: #F59E0B;
   --exam-result-orange-dark: #c87905;
   --exam-result-orange-light: #fff7e8;
 
-  --exam-result-blue: #3498db;
+  --exam-result-blue: #0EA5E9;
   --exam-result-blue-light: #edf7fd;
 
   --exam-result-text: #263238;

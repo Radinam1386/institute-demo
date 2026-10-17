@@ -5,16 +5,16 @@
 ===================================================== */
 
 .exam-page {
-  --exam-red: #e74c3c;
-  --exam-red-dark: #c0392b;
-  --exam-red-light: #fdecea;
+  --exam-red: #4F46E5;
+  --exam-red-dark: #4338CA;
+  --exam-red-light: #EEF2FF;
   --exam-red-border: rgba(231, 76, 60, 0.18);
 
-  --exam-blue: #3498db;
+  --exam-blue: #0EA5E9;
   --exam-blue-dark: #2474a8;
   --exam-blue-light: #eaf4fb;
 
-  --exam-green: #27ae60;
+  --exam-green: #059669;
   --exam-green-dark: #1e8e4e;
   --exam-green-light: #eaf8f0;
 
@@ -121,7 +121,7 @@
 }
 
 .exam-stat-icon.red {
-  background: linear-gradient(135deg, #f05b4b, #c0392b);
+  background: linear-gradient(135deg, #6366F1, #4338CA);
   box-shadow: 0 8px 18px rgba(231, 76, 60, 0.28);
 }
 
@@ -131,7 +131,7 @@
 }
 
 .exam-stat-icon.soft-red {
-  background: linear-gradient(135deg, #ff8c7f, #e74c3c);
+  background: linear-gradient(135deg, #818CF8, #4F46E5);
   box-shadow: 0 8px 18px rgba(231, 76, 60, 0.24);
 }
 
@@ -271,7 +271,7 @@
 
 .question-option-btn.selected {
   border-color: rgba(231, 76, 60, 0.4);
-  background: linear-gradient(135deg, #fff8f7, #fdecea);
+  background: linear-gradient(135deg, #fff8f7, #EEF2FF);
   box-shadow: 0 12px 24px rgba(231, 76, 60, 0.13);
 }
 
@@ -295,7 +295,7 @@
 
 .question-option-btn:hover .option-letter,
 .question-option-btn.selected .option-letter {
-  background: linear-gradient(135deg, #f05b4b, #c0392b);
+  background: linear-gradient(135deg, #6366F1, #4338CA);
   color: #ffffff;
   transform: scale(1.06);
 }
@@ -440,7 +440,7 @@
   height: 88px;
   margin-bottom: 16px;
   border-radius: 28px;
-  background: linear-gradient(135deg, #42c878, #1e8e4e);
+  background: linear-gradient(135deg, #34D399, #1e8e4e);
   color: #ffffff;
   box-shadow: 0 14px 30px rgba(39, 174, 96, 0.24);
 }
@@ -482,7 +482,7 @@
   padding: 12px 20px;
   border: 1px solid rgba(231, 76, 60, 0.2);
   border-radius: 999px;
-  background: linear-gradient(135deg, #fff8f7, #fdecea);
+  background: linear-gradient(135deg, #fff8f7, #EEF2FF);
   color: var(--exam-red-dark);
   font-size: 1rem;
   font-weight: 900;
@@ -570,11 +570,11 @@
 }
 
 .review-card.review-correct::before {
-  background: linear-gradient(180deg, #42c878, #1e8e4e);
+  background: linear-gradient(180deg, #34D399, #1e8e4e);
 }
 
 .review-card.review-wrong::before {
-  background: linear-gradient(180deg, #f05b4b, #c0392b);
+  background: linear-gradient(180deg, #6366F1, #4338CA);
 }
 
 .review-top {
@@ -879,19 +879,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f05b4b, #c0392b);
+  background: linear-gradient(135deg, #6366F1, #4338CA);
   color: #ffffff;
   box-shadow: 0 6px 16px rgba(231, 76, 60, 0.25);
   transition: transform 0.3s ease;
 }
 
 .student-exam-timer-banner.warning .timer-icon-circle {
-  background: linear-gradient(135deg, #f39c12, #d35400);
+  background: linear-gradient(135deg, #F59E0B, #B45309);
   box-shadow: 0 6px 16px rgba(243, 156, 18, 0.25);
 }
 
 .student-exam-timer-banner.critical .timer-icon-circle {
-  background: linear-gradient(135deg, #e74c3c, #962d22);
+  background: linear-gradient(135deg, #4F46E5, #962d22);
   box-shadow: 0 6px 16px rgba(231, 76, 60, 0.35);
   animation: timer-icon-wiggle 1s ease-in-out infinite;
 }
@@ -919,7 +919,7 @@
 .timer-title-group p {
   margin: 0.15rem 0 0;
   font-size: 0.78rem;
-  color: #7f8c8d;
+  color: #64748B;
 }
 
 .timer-countdown-display {
@@ -934,7 +934,7 @@
   justify-content: center;
   padding: 8px 18px;
   background: #ffffff;
-  border: 2px solid #eceff3;
+  border: 2px solid #E2E8F0;
   border-radius: 14px;
   font-family: monospace, "Vazirmatn", sans-serif;
   font-size: 1.35rem;
@@ -947,13 +947,13 @@
 
 .student-exam-timer-banner.warning .timer-digits-badge {
   border-color: rgba(243, 156, 18, 0.4);
-  color: #d35400;
+  color: #B45309;
   background: #fffdf5;
 }
 
 .student-exam-timer-banner.critical .timer-digits-badge {
   border-color: rgba(231, 76, 60, 0.6);
-  color: #c0392b;
+  color: #4338CA;
   background: #fff5f5;
 }
 
@@ -966,19 +966,19 @@
 
 .timer-status-chip.normal {
   background: #eaf8f0;
-  color: #27ae60;
+  color: #059669;
   border: 1px solid #c2eed4;
 }
 
 .timer-status-chip.warning {
   background: #fef5e7;
-  color: #d35400;
+  color: #B45309;
   border: 1px solid #f9e1b5;
 }
 
 .timer-status-chip.critical {
-  background: #fdecea;
-  color: #c0392b;
+  background: #EEF2FF;
+  color: #4338CA;
   border: 1px solid #fadbd8;
   animation: blink-tag 1s infinite;
 }
@@ -1004,18 +1004,18 @@
 .timer-progress-fill {
   height: 100%;
   border-radius: 999px;
-  background: linear-gradient(90deg, #27ae60, #2ecc71);
+  background: linear-gradient(90deg, #059669, #2ecc71);
   transition:
     width 1s linear,
     background 0.3s ease;
 }
 
 .student-exam-timer-banner.warning .timer-progress-fill {
-  background: linear-gradient(90deg, #f39c12, #f1c40f);
+  background: linear-gradient(90deg, #F59E0B, #f1c40f);
 }
 
 .student-exam-timer-banner.critical .timer-progress-fill {
-  background: linear-gradient(90deg, #c0392b, #e74c3c);
+  background: linear-gradient(90deg, #4338CA, #4F46E5);
 }
 
 .exam-time-expired-card {
@@ -1027,7 +1027,7 @@
   background: #fff5f5;
   border: 1px solid #fadbd8;
   border-radius: 16px;
-  color: #c0392b;
+  color: #4338CA;
 }
 
 .exam-time-expired-card h4 {
@@ -1039,7 +1039,7 @@
 .exam-time-expired-card p {
   margin: 0.2rem 0 0;
   font-size: 0.82rem;
-  color: #7f8c8d;
+  color: #64748B;
 }
 
 @media (max-width: 600px) {

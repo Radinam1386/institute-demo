@@ -48,7 +48,7 @@
 
   gap: 0.9rem;
 
-  background: #f8f9fa;
+  background: #F8FAFC;
 
   color: #555;
 
@@ -61,7 +61,7 @@
   width: 32px;
   height: 32px;
 
-  border: 3px solid #e9ecef;
+  border: 3px solid #E2E8F0;
   border-top-color: var(--primary);
 
   border-radius: 50%;

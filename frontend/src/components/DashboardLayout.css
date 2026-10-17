@@ -3,7 +3,7 @@
 .dashboard {
   display: flex;
   min-height: 100vh;
-  background: oklch(97.5% 0.005 29);
+  background: #F8FAFC;
   position: relative;
   overflow-x: hidden;
 }
@@ -51,12 +51,8 @@
 
 .dashboard-sidebar {
   width: 280px;
-  background: linear-gradient(
-    180deg,
-    oklch(55.799% 0.17067 24.538),
-    oklch(34.475% 0.12887 27.358)
-  );
-  color: white;
+  background: #1E1B4B;
+  color: #A5B4FC;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -64,7 +60,7 @@
   right: 0;
   height: 100vh;
   z-index: 100;
-  box-shadow: -4px 0 24px oklch(0% 0 0 / 0.1);
+  box-shadow: -4px 0 24px rgba(15, 23, 42, 0.2);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* =========================================================
@@ -192,7 +188,7 @@
 
   border: 1px solid oklch(100% 0 0 / 0.1);
 
-  color: oklch(88% 0.025 29);
+  color: #C7D2FE;
 
   font-family: inherit;
   font-size: 0.7rem;
@@ -368,8 +364,8 @@
   align-items: center;
   gap: 0.9rem;
   padding: 0.85rem 1.1rem;
-  border-radius: var(--radius-md);
-  color: oklch(78% 0.02 29);
+  border-radius: var(--radius-md, 12px);
+  color: #A5B4FC;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
@@ -385,7 +381,7 @@
   right: 0;
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, oklch(60% 0.19 29 / 0.15), transparent);
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.15), transparent);
   transition: width 0.3s ease;
 }
 
@@ -405,7 +401,7 @@
 
 .dashboard-link:hover {
   color: white;
-  background: oklch(100% 0 0 / 0.06);
+  background: rgba(99, 102, 241, 0.15);
 }
 
 .dashboard-link:hover .link-icon {
@@ -414,8 +410,8 @@
 
 .dashboard-link.active {
   color: white;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  box-shadow: 0 4px 14px oklch(60% 0.19 29 / 0.35);
+  background: #4F46E5;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
 }
 
 .dashboard-link.active::before {
@@ -434,20 +430,20 @@
   gap: 0.7rem;
   margin: 1rem;
   padding: 0.85rem 1.1rem;
-  border-radius: var(--radius-md);
-  color: oklch(80% 0.1 29);
-  background: oklch(100% 0 0 / 0.05);
+  border-radius: var(--radius-md, 12px);
+  color: #E2E8F0;
+  background: rgba(255, 255, 255, 0.05);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  border: 1px solid oklch(100% 0 0 / 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
 }
 
 .dashboard-logout:hover {
-  background: oklch(55% 0.2 29 / 0.25);
+  background: rgba(225, 29, 72, 0.2);
   color: white;
-  border-color: oklch(60% 0.19 29 / 0.4);
+  border-color: rgba(225, 29, 72, 0.4);
   transform: translateX(-3px);
 }
 
@@ -553,7 +549,7 @@
 
   border-radius: 999px;
 
-  background: oklch(96% 0.04 29);
+  background: #EEF2FF;
 
   color: var(--primary);
 
@@ -574,7 +570,7 @@
 
   max-width: 100%;
 
-  color: oklch(20% 0 0);
+  color: #1E293B;
 
   font-size: 1.4rem;
   font-weight: 800;
@@ -603,17 +599,17 @@
   align-items: center;
   justify-content: center;
 
-  border: 1px solid oklch(100% 0 0 / 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
   border-radius: 13px;
 
-  background: linear-gradient(135deg, var(--red-5), var(--red-7));
+  background: linear-gradient(135deg, #6366F1, #4338CA);
 
   color: #ffffff;
 
   cursor: pointer;
 
-  box-shadow: 0 5px 14px oklch(60% 0.19 29 / 0.28);
+  box-shadow: 0 5px 14px rgba(79, 70, 229, 0.28);
 
   transition:
     transform 0.25s ease,
@@ -624,7 +620,7 @@
 .mobile-menu-btn:hover {
   transform: translateY(-2px);
 
-  box-shadow: 0 8px 18px oklch(60% 0.19 29 / 0.35);
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.35);
 }
 
 .mobile-menu-btn:active {

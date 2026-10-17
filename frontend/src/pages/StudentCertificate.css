@@ -48,7 +48,7 @@
 
   background: linear-gradient(
     145deg,
-    #dc2626,
+    #E11D48,
     #b91c1c
   );
 
@@ -209,7 +209,7 @@
 
   background: #fef2f2;
 
-  color: #dc2626;
+  color: #E11D48;
 }
 
 .student-certificate-x8k4-panel-title > div:last-child {
@@ -257,7 +257,7 @@
 
   margin-bottom: 10px;
 
-  background: #fafafa;
+  background: #F8FAFC;
 
   border: 1px solid #e4e4e4;
 
@@ -276,7 +276,7 @@
 .student-certificate-x8k4-search:focus-within {
   background: #fff;
 
-  border-color: #dc2626;
+  border-color: #E11D48;
 
   box-shadow:
     0 0 0 3px rgba(220, 38, 38, 0.08);
@@ -354,7 +354,7 @@
 }
 
 .student-certificate-x8k4-select-wrapper select:focus {
-  border-color: #dc2626;
+  border-color: #E11D48;
 
   box-shadow:
     0 0 0 3px rgba(220, 38, 38, 0.08);
@@ -392,7 +392,7 @@
 
   border-radius: 13px;
 
-  background: #fafafa;
+  background: #F8FAFC;
 
   border: 1px solid #ededed;
 
@@ -414,7 +414,7 @@
   background:
     linear-gradient(
       145deg,
-      #dc2626,
+      #E11D48,
       #991b1b
     );
 
@@ -531,7 +531,7 @@
 
 .student-certificate-x8k4-field input:focus,
 .student-certificate-x8k4-field select:focus {
-  border-color: #dc2626;
+  border-color: #E11D48;
 
   box-shadow:
     0 0 0 3px rgba(220, 38, 38, 0.08);
@@ -585,7 +585,7 @@
 
   border-radius: 10px;
 
-  background: #fafafa;
+  background: #F8FAFC;
 
   color: #666;
 
@@ -659,7 +659,7 @@
 
   margin-bottom: 3px;
 
-  color: #dc2626;
+  color: #E11D48;
 
   font-size: 9px;
 
@@ -935,7 +935,7 @@
 
   background: #fef2f2;
 
-  color: #dc2626;
+  color: #E11D48;
 }
 
 .student-certificate-x8k4-export-info > div:last-child {
@@ -1106,7 +1106,7 @@
   border:
     3px solid #eeeeee;
 
-  border-top-color: #dc2626;
+  border-top-color: #E11D48;
 
   animation:
     student-certificate-x8k4-spin

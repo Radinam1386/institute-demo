@@ -1476,7 +1476,7 @@ function AdminTeacherDetails() {
                     ) : (
                       <span
                         style={{
-                          color: "#95a5a6",
+                          color: "#94A3B8",
                           fontSize: "0.8rem",
                         }}
                       >
@@ -1509,7 +1509,7 @@ function AdminTeacherDetails() {
                         style={{
                           background: "#fff",
                           border:
-                            "1px solid #eceff3",
+                            "1px solid #E2E8F0",
                           borderRadius: "6px",
                           width: "28px",
                           height: "28px",
@@ -1531,15 +1531,15 @@ function AdminTeacherDetails() {
                         onClick={copyPassword}
                         style={{
                           background: copiedPassword
-                            ? "#edf8f1"
+                            ? "#ECFDF5"
                             : "#fff",
                           color: copiedPassword
-                            ? "#2e8b57"
-                            : "#2d3436",
+                            ? "#10B981"
+                            : "#1E293B",
                           border: `1px solid ${
                             copiedPassword
-                              ? "#2e8b57"
-                              : "#eceff3"
+                              ? "#10B981"
+                              : "#E2E8F0"
                           }`,
                           borderRadius: "6px",
                           padding: "0 0.5rem",
@@ -1907,7 +1907,7 @@ function AdminTeacherDetails() {
                           background:
                             "transparent",
                           border: "none",
-                          color: "#7f8c8d",
+                          color: "#64748B",
                           cursor: "pointer",
                           display: "flex",
                           alignItems: "center",

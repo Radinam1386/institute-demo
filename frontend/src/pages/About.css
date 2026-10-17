@@ -2,22 +2,22 @@
 
 /* ── Tokens ── */
 :root {
-  --red-9:  oklch(30% 0.18 25);
-  --red-7:  oklch(42% 0.22 25);
-  --red-5:  oklch(52% 0.22 25);
-  --red-4:  oklch(60% 0.20 25);
-  --red-1:  oklch(96% 0.04 25);
-  --neu-0:  oklch(98% 0 0);
-  --neu-1:  oklch(95% 0 0);
-  --neu-2:  oklch(92% 0 0);
-  --neu-3:  oklch(88% 0 0);
-  --neu-6:  oklch(55% 0 0);
-  --neu-8:  oklch(28% 0 0);
-  --neu-9:  oklch(14% 0 0);
-  --r-sm:   10px;
-  --r-md:   16px;
-  --r-lg:   24px;
-  --r-xl:   32px;
+  --red-9:  #312E81;
+  --red-7:  #4338CA;
+  --red-5:  #4F46E5;
+  --red-4:  #6366F1;
+  --red-1:  #EEF2FF;
+  --neu-0:  #F8FAFC;
+  --neu-1:  #F1F5F9;
+  --neu-2:  #E2E8F0;
+  --neu-3:  #CBD5E1;
+  --neu-6:  #64748B;
+  --neu-8:  #334155;
+  --neu-9:  #1E293B;
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   16px;
+  --r-xl:   24px;
 }
 
 /* ── Shared ── */
@@ -121,7 +121,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 8px 24px oklch(52% 0.22 25 / 0.35);
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.35);
 }
 
 .badge-num {
@@ -191,8 +191,8 @@
 
 .value-card:hover {
   transform: translateY(-4px);
-  border-color: oklch(52% 0.22 25 / 0.3);
-  box-shadow: 0 12px 36px oklch(52% 0.22 25 / 0.1);
+  border-color: rgba(79, 70, 229, 0.3);
+  box-shadow: 0 12px 36px rgba(79, 70, 229, 0.1);
 }
 
 .value-icon {

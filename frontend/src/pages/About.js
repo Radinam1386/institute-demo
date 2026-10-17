@@ -1,6 +1,6 @@
-// src/pages/About.jsx
 import { CheckCircle2, HeartHandshake, Target, UsersRound } from "lucide-react";
 import "./About.css";
+import { siteConfig } from "../config/siteConfig";
 
 function About() {
   return (
@@ -12,7 +12,7 @@ function About() {
         </div>
         <div className="container">
           <span className="eyebrow">Introduction</span>
-          <h1>درباره آموزشگاه زبان کیش</h1>
+          <h1>درباره {siteConfig.instituteName}</h1>
           <p>ما تلاش می‌کنیم یادگیری زبان برای هر زبان‌آموز، منظم، قابل پیگیری و لذت‌بخش باشد.</p>
         </div>
       </section>
@@ -23,7 +23,7 @@ function About() {
           <div className="story-grid">
             <div className="story-visual">
               <div className="story-img-wrap">
-                <img className="story-img-placeholder" src="/logo.png" alt="آموزشگاه زبان کیش" />
+                <img className="story-img-placeholder" src={siteConfig.logoPath || "/logo.png"} alt={siteConfig.instituteName} />
                 <div className="story-badge">
                   <span className="badge-num">۱۸+</span>
                   <span className="badge-lbl">سال تجربه</span>
@@ -35,7 +35,7 @@ function About() {
               <span className="eyebrow">داستان ما</span>
               <h2>آموزشگاهی برای یادگیری آرام، اصولی و هدفمند</h2>
               <p>
-                آموزشگاه زبان کیش با هدف ایجاد فضایی حرفه‌ای برای یادگیری زبان فعالیت می‌کند.
+                {siteConfig.instituteName} با هدف ایجاد فضایی حرفه‌ای برای یادگیری زبان فعالیت می‌کند.
                 در این مجموعه، زبان‌آموز فقط در کلاس شرکت نمی‌کند؛ بلکه مسیر آموزشی او از
                 ثبت‌نام تا آزمون و پیشرفت دوره‌ای پیگیری می‌شود.
               </p>

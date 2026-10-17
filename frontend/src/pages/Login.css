@@ -1,17 +1,17 @@
 :root {
-  --red-9: oklch(30% 0.18 25);
-  --red-7: oklch(42% 0.22 25);
-  --red-5: oklch(52% 0.22 25);
-  --red-4: oklch(60% 0.2 25);
-  --red-1: oklch(96% 0.04 25);
-  --neu-0: oklch(98% 0 0);
-  --neu-1: oklch(95% 0 0);
-  --neu-3: oklch(88% 0 0);
-  --neu-6: oklch(55% 0 0);
-  --neu-9: oklch(14% 0 0);
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  --red-9: #312E81;
+  --red-7: #4338CA;
+  --red-5: #4F46E5;
+  --red-4: #6366F1;
+  --red-1: #EEF2FF;
+  --neu-0: #F8FAFC;
+  --neu-1: #F1F5F9;
+  --neu-3: #E2E8F0;
+  --neu-6: #64748B;
+  --neu-9: #1E293B;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
 }
 .login-root {
   min-height: 100vh;
@@ -43,7 +43,7 @@
 .blob-1 {
   width: 500px;
   height: 500px;
-  background: var(--red-5);
+  background: #4F46E5;
   top: -120px;
   right: -100px;
 }
@@ -51,9 +51,65 @@
 .blob-2 {
   width: 400px;
   height: 400px;
-  background: oklch(65% 0.18 25);
+  background: #818CF8;
   bottom: -100px;
   left: -80px;
+}
+
+/* ---- راهنمای حساب‌های نمونه دمو ---- */
+.login-demo-hint {
+  background: #FFFBEB;
+  border: 1px dashed rgba(146, 64, 14, 0.35);
+  border-radius: var(--radius-md, 12px);
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+
+.login-demo-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #92400E;
+  margin-bottom: 8px;
+}
+
+.login-demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  color: #78350F;
+}
+
+.login-demo-table td {
+  padding: 4px 6px;
+}
+
+.login-demo-role {
+  font-weight: 700;
+  text-align: right;
+  color: #92400E;
+}
+
+.login-demo-code {
+  font-family: monospace;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.login-demo-fill-btn {
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  background: #FFFFFF;
+  color: #92400E;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-demo-fill-btn:hover {
+  background: #F59E0B;
+  color: #78350F;
 }
 
 /* ── Inner layout ── */
@@ -84,7 +140,7 @@
 .brand-icon {
   font-size: 2.8rem;
   margin-bottom: 10px;
-  filter: drop-shadow(0 4px 12px oklch(52% 0.22 25 / 0.3));
+  filter: drop-shadow(0 4px 12px rgba(79, 70, 229, 0.3));
 }
 
 .brand-content {
@@ -188,8 +244,8 @@
 }
 
 .input-wrap input:focus {
-  border-color: var(--red-5);
-  box-shadow: 0 0 0 3px oklch(52% 0.22 25 / 0.12);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.14);
   background: #fff;
 }
 /* =====================================================
@@ -231,9 +287,9 @@
 }
 
 .input-password-toggle:hover {
-  color: var(--red-5);
+  color: var(--primary);
 
-  background: var(--red-1);
+  background: #EEF2FF;
 }
 
 .input-password-toggle:active {
@@ -250,7 +306,7 @@
 .btn-submit {
   width: 100%;
   padding: 13px;
-  background: var(--red-5);
+  background: linear-gradient(135deg, #6366F1, #4338CA);
   color: #fff;
   border: none;
   border-radius: var(--radius-sm);
@@ -266,13 +322,13 @@
     background 0.18s,
     transform 0.15s,
     box-shadow 0.18s;
-  box-shadow: 0 4px 16px oklch(52% 0.22 25 / 0.3);
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
   margin-top: 4px;
 }
 
 .btn-submit:hover:not(:disabled) {
-  background: var(--red-7);
-  box-shadow: 0 6px 20px oklch(52% 0.22 25 / 0.4);
+  background: linear-gradient(135deg, #4F46E5, #3730A3);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
   transform: translateY(-1px);
 }
 

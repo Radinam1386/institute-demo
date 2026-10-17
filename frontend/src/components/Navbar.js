@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { X, Home, Users, BookOpen, Phone, LogIn } from "lucide-react";
 import "./Navbar.css";
 import { AnimatedButton } from "./AnimatedButton";
+import { siteConfig } from "../config/siteConfig";
 
 const links = [
   {
@@ -75,12 +76,12 @@ export default function Navbar() {
           >
             <img
               className="navbar__logo"
-              src="/logo.png"
-              alt="لوگو آموزشگاه زبان کیش"
+              src={siteConfig.logoPath || "/logo.png"}
+              alt={`لوگو ${siteConfig.instituteName}`}
             />
 
             <div className="navbar__brand-text">
-              <span>آموزشگاه زبان کیش</span>
+              <span>{siteConfig.instituteName}</span>
 
               <span
                 style={{
@@ -88,7 +89,7 @@ export default function Navbar() {
                   display: "block",
                 }}
               >
-                خوبان زنجان
+                {siteConfig.instituteNameEn}
               </span>
             </div>
           </Link>
@@ -166,15 +167,15 @@ export default function Navbar() {
         <div className="navbar__mobile-brand">
           <div className="navbar__mobile-brand-flex">
             <img
-              src="/logo.png"
+              src={siteConfig.logoPath || "/logo.png"}
               className="navbar__mobile-logo"
-              alt="Kish Institute"
+              alt={siteConfig.instituteName}
             />
 
             <div className="navbar__mobile-brand-text">
-              <strong>آموزشگاه زبان کیش</strong>
+              <strong>{siteConfig.instituteName}</strong>
 
-              <small>خوبان زنجان</small>
+              <small>{siteConfig.instituteNameEn}</small>
             </div>
           </div>
 
@@ -241,8 +242,8 @@ export default function Navbar() {
           </Link>
 
           <div className="navbar__mobile-footer">
-            <span>آموزشگاه زبان کیش</span>
-            <small>خوبان زنجان</small>
+            <span>{siteConfig.instituteName}</span>
+            <small>{siteConfig.instituteNameEn}</small>
           </div>
         </div>
       </aside>

@@ -35,7 +35,7 @@
   padding: 1.2rem;
 
   background: #fff;
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 20px;
 
   box-shadow: 0 6px 22px rgba(37, 41, 45, 0.04);
@@ -73,7 +73,7 @@
 .term-banner-info h3 {
   margin: 0;
 
-  color: #2d3436;
+  color: #1E293B;
 
   font-size: 0.95rem;
   font-weight: 800;
@@ -85,7 +85,7 @@
 .term-banner-info p {
   margin: 0.2rem 0 0;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.76rem;
   line-height: 1.7;
@@ -110,7 +110,7 @@
 .term-dropdown-wrapper label {
   flex: 0 0 auto;
 
-  color: #2d3436;
+  color: #1E293B;
   font-size: 0.8rem;
   font-weight: 700;
   white-space: nowrap;
@@ -123,8 +123,8 @@
 
   padding: 0.55rem 0.8rem;
 
-  color: #2d3436;
-  background: #f8f9fa;
+  color: #1E293B;
+  background: #F8FAFC;
 
   border: 1px solid #e3e7eb;
   border-radius: 11px;
@@ -184,7 +184,7 @@
 
   background: #fff;
 
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 20px;
 
   box-shadow: 0 8px 28px rgba(37, 41, 45, 0.045);
@@ -322,7 +322,7 @@
   overflow-x: auto;
   overflow-y: hidden;
 
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 15px;
 
   background: #fff;
@@ -341,14 +341,14 @@
 }
 
 .admin-panel-x7k2-table thead {
-  background: #f8f9fa;
-  border-bottom: 2px solid #eceff3;
+  background: #F8FAFC;
+  border-bottom: 2px solid #E2E8F0;
 }
 
 .admin-panel-x7k2-table th {
   padding: 0.9rem 1rem;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.78rem;
   font-weight: 800;
@@ -359,11 +359,11 @@
 .admin-panel-x7k2-table td {
   padding: 0.85rem 1rem;
 
-  color: #2d3436;
+  color: #1E293B;
 
   font-size: 0.84rem;
 
-  border-bottom: 1px solid #f1f2f6;
+  border-bottom: 1px solid #F1F5F9;
 
   vertical-align: middle;
 }
@@ -373,7 +373,7 @@
 }
 
 .admin-panel-x7k2-table tbody tr:hover {
-  background: #fff9f8;
+  background: #F8FAFC;
 }
 
 .admin-panel-x7k2-table tbody tr:last-child td {
@@ -385,7 +385,7 @@
 
   overflow: hidden;
 
-  color: #2d3436;
+  color: #1E293B;
 
   font-weight: 800;
 
@@ -396,7 +396,7 @@
 .admin-panel-x7k2-student-phone {
   display: inline-block;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.8rem;
 
@@ -414,8 +414,8 @@
 
   overflow: hidden;
 
-  color: #2d3436;
-  background: #f1f2f6;
+  color: #1E293B;
+  background: #F1F5F9;
 
   border-radius: 8px;
 
@@ -444,13 +444,13 @@
 }
 
 .admin-panel-status-paid {
-  color: #2e8b57;
-  background: #edf8f1;
-  border: 1px solid #d9f0e1;
+  color: #10B981;
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
 }
 
 .admin-panel-status-pending {
-  color: #d88922;
+  color: #D97706;
   background: #fff5e8;
   border: 1px solid #f5dfbb;
 }
@@ -473,7 +473,7 @@
 
   padding: 2rem 1rem;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.82rem;
 
@@ -496,7 +496,7 @@
   margin-top: 1.1rem;
   padding-top: 0.9rem;
 
-  border-top: 1px solid #f0f1f3;
+  border-top: 1px solid #F1F5F9;
 
   direction: rtl;
 }
@@ -572,7 +572,7 @@
 
   cursor: not-allowed;
 
-  background: #f8f9fa;
+  background: #F8FAFC;
 }
 
 .admin-panel-pagination-info {
@@ -640,7 +640,7 @@
 
   background: #fff;
 
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 15px;
 
   text-decoration: none;
@@ -656,7 +656,7 @@
 
 .admin-panel-teacher-row-card:hover,
 .admin-panel-class-row-card:hover {
-  background: #fff9f8;
+  background: #F8FAFC;
 
   border-color: rgba(231, 76, 60, 0.25);
 
@@ -691,7 +691,7 @@
 
 .admin-panel-class-icon-circle {
   color: var(--primary);
-  background: #fff1ef;
+  background: #EEF2FF;
 }
 
 .admin-panel-teacher-info-col,
@@ -713,7 +713,7 @@
 
   overflow: hidden;
 
-  color: #2d3436;
+  color: #1E293B;
 
   font-size: 0.88rem;
   font-weight: 800;
@@ -731,7 +731,7 @@
 
   overflow: hidden;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.74rem;
   line-height: 1.6;
@@ -761,12 +761,12 @@
 
 .admin-panel-teacher-classes-pill {
   color: var(--primary);
-  background: #fff1ef;
+  background: #EEF2FF;
 }
 
 .admin-panel-class-capacity-badge {
-  color: #3578c8;
-  background: #eef5ff;
+  color: #0284C7;
+  background: #F0F9FF;
 }
 
 .admin-panel-arrow-icon {
@@ -1004,7 +1004,7 @@
 
     background: #fff;
 
-    border: 1px solid #eceff3;
+    border: 1px solid #E2E8F0;
     border-radius: 15px;
 
     box-shadow: 0 3px 12px rgba(37, 41, 45, 0.035);
@@ -1026,7 +1026,7 @@
 
     padding: 0.55rem 0;
 
-    border-bottom: 1px solid #f1f2f6;
+    border-bottom: 1px solid #F1F5F9;
 
     font-size: 0.75rem;
   }

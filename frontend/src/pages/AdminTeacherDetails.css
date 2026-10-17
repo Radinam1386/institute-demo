@@ -5,16 +5,16 @@
    ========================================================= */
 
 .admin-teacher-details-x7k2-page {
-  --admin-teacher-details-x7k2-red: #e74c3c;
-  --admin-teacher-details-x7k2-red-dark: #c0392b;
-  --admin-teacher-details-x7k2-red-light: #fff1f1;
-  --admin-teacher-details-x7k2-red-soft: #fdf5f3;
+  --admin-teacher-details-x7k2-red: #4F46E5;
+  --admin-teacher-details-x7k2-red-dark: #4338CA;
+  --admin-teacher-details-x7k2-red-light: #EEF2FF;
+  --admin-teacher-details-x7k2-red-soft: #F5F7FF;
   --admin-teacher-details-x7k2-red-border:
     rgba(231, 76, 60, 0.16);
 
-  --admin-teacher-details-x7k2-text: #2d3436;
-  --admin-teacher-details-x7k2-muted: #7f8c8d;
-  --admin-teacher-details-x7k2-border: #eceff3;
+  --admin-teacher-details-x7k2-text: #1E293B;
+  --admin-teacher-details-x7k2-muted: #64748B;
+  --admin-teacher-details-x7k2-border: #E2E8F0;
 
   --admin-teacher-details-x7k2-glass:
     rgba(255, 255, 255, 0.78);
@@ -274,8 +274,8 @@
 
 
 .admin-teacher-details-x7k2-stat-primary {
-  background: #fff1f1;
-  color: #e74c3c;
+  background: #EEF2FF;
+  color: #4F46E5;
 }
 
 
@@ -552,7 +552,7 @@
     linear-gradient(
       135deg,
       #ffffff,
-      #fff8f6
+      #F8FAFC
     );
 
   border: 1px solid
@@ -832,7 +832,7 @@
 }
 
 .teacher-credentials-edit-btn:hover {
-  background: #fff1ef;
+  background: #EEF2FF;
   border-color: var(--primary);
   transform: translateY(-1px);
 }

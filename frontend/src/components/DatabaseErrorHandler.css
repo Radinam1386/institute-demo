@@ -45,7 +45,7 @@
 
   margin-bottom: 3px;
 
-  color: #c0392b;
+  color: #4338CA;
   font-size: 13px;
   font-weight: 800;
 }
@@ -88,7 +88,7 @@
 
 .database-error-handler__close:hover {
   background: #ffe4e4;
-  color: #c0392b;
+  color: #4338CA;
 }
 
 /* Database */
@@ -163,7 +163,7 @@
 
 .database-error-handler.server
   .database-error-handler__icon {
-  background: #e9ecef;
+  background: #E2E8F0;
 }
 
 .database-error-handler.server

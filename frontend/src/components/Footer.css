@@ -1,10 +1,10 @@
 :root {
-  --footer-bg: oklch(14% 0.012 22);
-  --footer-surface: oklch(18% 0.014 22);
-  --footer-border: oklch(24% 0.016 22);
-  --footer-text: oklch(88% 0.006 50);
-  --footer-muted: oklch(62% 0.008 40);
-  --footer-accent: var(--a-400);
+  --footer-bg: #0F172A;
+  --footer-surface: #1E293B;
+  --footer-border: #334155;
+  --footer-text: #F8FAFC;
+  --footer-muted: #94A3B8;
+  --footer-accent: #818CF8;
 }
 
 /* Wave */

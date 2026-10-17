@@ -447,7 +447,7 @@
     linear-gradient(
       135deg,
       oklch(98% 0.02 29),
-      oklch(96% 0.04 29)
+      #EEF2FF
     );
 
   border-bottom: 2px solid
@@ -720,7 +720,7 @@
 
 
 .admin-tuition-x8p4-status.unpaid {
-  color: oklch(42% 0.18 25);
+  color: #3730A3;
 
   background:
     oklch(95% 0.06 25);

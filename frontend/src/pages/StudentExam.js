@@ -462,9 +462,9 @@ function StudentExam() {
             {error && (
               <div
                 style={{
-                  background: "oklch(95% 0.05 25 / 0.8)",
+                  background: "#EEF2FF",
                   border: "1px solid oklch(75% 0.15 25 / 0.3)",
-                  color: "oklch(45% 0.18 25)",
+                  color: "#3730A3",
                   padding: "0.85rem 1.25rem",
                   borderRadius: "14px",
                   marginBottom: "1.5rem",

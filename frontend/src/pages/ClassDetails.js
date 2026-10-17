@@ -23,6 +23,7 @@ import StatCard from "../components/StatCard";
 import { AnimatedButton } from "../components/AnimatedButton";
 import { api, getFullName, storage } from "../services/api";
 import { toJalaliDateString, toPersianDigits } from "../utils/dateUtils";
+import { siteConfig } from "../config/siteConfig";
 
 import "./ClassDetails.css";
 
@@ -350,7 +351,7 @@ export default function ClassDetails() {
                 </div>
                 <h3 className="teacher-name">{getFullName(teacher)}</h3>
                 <span className="teacher-role-badge">
-                  استاد رسمی آموزشگاه کیش
+                  استاد رسمی {siteConfig.instituteName}
                 </span>
 
                 <div className="teacher-contacts">

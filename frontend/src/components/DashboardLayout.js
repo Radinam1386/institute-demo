@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import "./DashboardLayout.css";
 import { storage } from "../services/api";
+import { siteConfig } from "../config/siteConfig";
 
 function DashboardLayout({ role, title, children, menuType }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -174,9 +175,9 @@ function DashboardLayout({ role, title, children, menuType }) {
       <aside className={`dashboard-sidebar ${sidebarOpen ? "open" : ""}`}>
         <div className="dashboard-brand">
           <div className="brand-flex">
-            <img src="/logo.png" className="brand-logo" alt="Kish Institute" />
+            <img src="/logo.png" className="brand-logo" alt={siteConfig.instituteName} />
             <div className="brand-text">
-              <strong>Kish Institute</strong>
+              <strong>{siteConfig.instituteName}</strong>
               <small>{role}</small>
             </div>
           </div>

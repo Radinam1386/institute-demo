@@ -17,16 +17,16 @@
   gap: 0.45rem;
   font-size: 0.84rem;
   font-weight: 700;
-  color: #2d3436;
+  color: #1E293B;
 }
 
 .jalali-datepicker-label svg {
-  color: var(--primary, #e74c3c);
+  color: var(--primary, #4F46E5);
   flex-shrink: 0;
 }
 
 .jalali-datepicker-label .req-star {
-  color: var(--primary, #e74c3c);
+  color: var(--primary, #4F46E5);
   margin-right: 0.2rem;
 }
 
@@ -53,8 +53,8 @@
   min-height: 44px;
   padding: 0.65rem 0.85rem;
   background: #ffffff;
-  color: #2d3436;
-  border: 1px solid #eceff3;
+  color: #1E293B;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   font-family: inherit;
   font-size: 0.85rem;
@@ -67,14 +67,14 @@
 }
 
 .date-select:focus {
-  border-color: var(--primary, #e74c3c);
+  border-color: var(--primary, #4F46E5);
   box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.09);
   background: #ffffff;
 }
 
 .date-select option {
   background: #ffffff;
-  color: #2d3436;
+  color: #1E293B;
   padding: 0.5rem;
 }
 
@@ -100,16 +100,16 @@
   align-items: center;
   gap: 0.4rem;
   font-size: 0.8rem;
-  color: #7f8c8d;
+  color: #64748B;
 }
 
 .formatted-preview .preview-icon {
-  color: var(--primary, #e74c3c);
+  color: var(--primary, #4F46E5);
   flex-shrink: 0;
 }
 
 .formatted-preview strong {
-  color: var(--primary, #e74c3c);
+  color: var(--primary, #4F46E5);
   font-weight: 800;
 }
 
@@ -126,7 +126,7 @@
   padding: 0.3rem 0.65rem;
   background: #ffffff;
   color: #495057;
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 7px;
   font-size: 0.76rem;
   font-weight: 700;
@@ -136,8 +136,8 @@
 }
 
 .preset-btn:hover {
-  background: #fff1ef;
-  color: var(--primary, #e74c3c);
+  background: #EEF2FF;
+  color: var(--primary, #4F46E5);
   border-color: rgba(231, 76, 60, 0.25);
   transform: translateY(-1px);
 }

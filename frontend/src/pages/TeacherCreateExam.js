@@ -704,7 +704,7 @@ function TeacherCreateExam() {
 
             <span
               style={{
-                color: "var(--primary, #e74c3c)",
+                color: "var(--primary, #4F46E5)",
                 fontWeight: "800",
               }}
             >
@@ -774,13 +774,13 @@ function TeacherCreateExam() {
                       display: "inline-flex",
                       alignItems: "center",
                       padding: "4px 10px",
-                      background: "oklch(96% 0.04 29)",
+                      background: "#EEF2FF",
                       border:
-                        "1px solid oklch(60% 0.19 29 / 0.2)",
+                        "1px solid rgba(79, 70, 229, 0.2)",
                       borderRadius: "8px",
                       fontSize: "0.78rem",
                       fontWeight: "800",
-                      color: "var(--primary, #e74c3c)",
+                      color: "var(--primary, #4F46E5)",
                     }}
                   >
                     بارم:{" "}

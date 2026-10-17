@@ -5,6 +5,8 @@ import { useAuth } from "../context/AuthContext";
 import { Eye, EyeClosed, UserRound } from "lucide-react";
 import DatabaseErrorHandler from "../components/DatabaseErrorHandler";
 import "./Login.css";
+import { siteConfig, isDemoMode } from "../config/siteConfig";
+import { demoAccounts } from "../demo/demoData";
 
 export default function Login() {
   const [phone, setPhone] = useState("");
@@ -66,20 +68,49 @@ export default function Login() {
             <div className="brand-content">
 
               <h1>
-                آموزشگاه زبان کیش
+                {siteConfig.instituteName}
               </h1>
 
               <p className="subtitle">
-                خوبان زنجان
+                {siteConfig.instituteNameEn}
               </p>
 
               <p className="tagline">
-                یادگیری حرفه‌ای، آینده‌ای روشن
+                {siteConfig.tagline}
               </p>
 
             </div>
 
           </div>
+
+          {isDemoMode && demoAccounts && (
+            <div className="login-demo-hint">
+              <div className="login-demo-title">حساب‌های آزمایشی نسخه دمو (کلیک برای درج)</div>
+              <table className="login-demo-table">
+                <tbody>
+                  {Object.values(demoAccounts).map((acc) => (
+                    <tr key={acc.username}>
+                      <td className="login-demo-role">{acc.label}</td>
+                      <td dir="ltr" className="login-demo-code">{acc.username}</td>
+                      <td dir="ltr" className="login-demo-code">{acc.password}</td>
+                      <td>
+                        <button
+                          type="button"
+                          className="login-demo-fill-btn"
+                          onClick={() => {
+                            setPhone(acc.username);
+                            setPass(acc.password);
+                          }}
+                        >
+                          انتخاب
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
 
           <form
             className="login-form"

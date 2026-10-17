@@ -1,77 +1,70 @@
-// src/pages/ContactPage.jsx
 import {
   Phone,
   MapPin,
 } from "lucide-react";
 import "./ContactPage.css";
+import { siteConfig } from "../config/siteConfig";
 
-const CONTACTS = [
-  { label: "024-3345-4315", href: "tel:02433454315" },
-  { label: "024-3347-0334", href: "tel:02433470334" },
-  { label: "024-3344-2639", href: "tel:02433442639" },
-];
+const SOCIAL_ICONS = {
+  instagram: (
+    <svg
+      width="25"
+      height="25"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  telegram: (
+    <svg
+      width="25"
+      height="25"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21.5 2.5L2 10l7 2.5 2.5 7L21.5 2.5z" />
+      <path d="M9 12.5l3.5 3.5" />
+    </svg>
+  ),
+  whatsapp: (
+    <svg
+      width="25"
+      height="25"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </svg>
+  ),
+};
 
-const ADDRESS = "زنجان، سعدی شمالی، نبش خیابان بهار";
+const CONTACTS = (siteConfig.phones || []).map((p) => ({
+  label: p,
+  href: `tel:${p.replace(/[^0-9]/g, "")}`,
+}));
 
-const SOCIALS = [
-  {
-    label: "اینستاگرام",
-    href: "https://www.instagram.com/kishkhoban/",
-    icon: (
-      <svg
-        width="25"
-        height="25"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-      </svg>
-    ),
-  },
-  {
-    label: "تلگرام",
-    href: "https://t.me/kishzanjan",
-    icon: (
-      <svg
-        width="25"
-        height="25"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M21.5 2.5L2 10l7 2.5 2.5 7L21.5 2.5z" />
-        <path d="M9 12.5l3.5 3.5" />
-      </svg>
-    ),
-  },
-  {
-    label: "",
-    href: "https://t.me/Behhhh",
-    icon: (
-      <svg
-        width="25"
-        height="25"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-      </svg>
-    ),
-  },
-];
+const ADDRESS = siteConfig.address;
+
+const SOCIALS = (siteConfig.socialLinks || []).map((s) => ({
+  label: s.label,
+  href: s.href || "#",
+  icon: SOCIAL_ICONS[s.type] || SOCIAL_ICONS.telegram,
+}));
 
 function ContactPage() {
   return (
@@ -131,16 +124,18 @@ function ContactPage() {
                 ))}
               </div>
             </div>
-            <div className="contact-map">
-              <iframe 
-              src="https://balad.ir/embed?p=2cloCikdZZhtSF" 
-              title="مشاهده «زبانسرا کیش» روی نقشه بلد" 
-              className="contact-map"
-              allowfullscreen=""
-              aria-hidden="false"
-              tabindex="0"
-              ></iframe>
-            </div>
+            {siteConfig.mapEmbedUrl ? (
+              <div className="contact-map">
+                <iframe
+                  src={siteConfig.mapEmbedUrl}
+                  title={`مشاهده «${siteConfig.instituteName}» روی نقشه`}
+                  className="contact-map"
+                  allowFullScreen=""
+                  aria-hidden="false"
+                  tabIndex="0"
+                ></iframe>
+              </div>
+            ) : null}
           </div>
         </div>
       </section>

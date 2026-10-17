@@ -2,7 +2,7 @@
 .contact-page {
   position: relative;
   overflow-x: hidden;
-  background: oklch(99% 0.005 20);
+  background: #F8FAFC;
 }
 
 /* ---------- Global Blobs (behind everything) ---------- */
@@ -10,7 +10,7 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
-  opacity: 0.45;
+  opacity: 0.35;
   z-index: 0;
   animation: contactBlobMove 14s ease-in-out infinite;
   pointer-events: none;
@@ -21,7 +21,7 @@
   height: 320px;
   top: -80px;
   right: -60px;
-  background: oklch(60% 0.22 25);
+  background: #6366F1;
 }
 
 .contact-blob-2 {
@@ -29,7 +29,7 @@
   height: 260px;
   bottom: 40%;
   left: 0px;
-  background: oklch(75% 0.18 20);
+  background: #818CF8;
   animation-delay: -4s;
 }
 
@@ -38,7 +38,7 @@
   height: 300px;
   bottom: 5%;
   right: 0%;
-  background: oklch(80% 0.09 20);
+  background: #C7D2FE;
   animation-delay: -8s;
 }
 
@@ -73,8 +73,8 @@
   display: inline-block;
   padding: 6px 16px;
   border-radius: 999px;
-  background: oklch(93% 0.05 20 / 0.7);
-  color: oklch(45% 0.22 25);
+  background: #EEF2FF;
+  color: #3730A3;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 16px;
@@ -83,14 +83,14 @@
 .contact-hero-title {
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 800;
-  color: oklch(30% 0.03 20);
+  color: #1E293B;
   margin: 0 0 16px;
 }
 
 .contact-hero-subtitle {
   font-size: 1.05rem;
   line-height: 1.9;
-  color: oklch(45% 0.02 20);
+  color: #475569;
 }
 
 /* ---------- Body / Grid ---------- */
@@ -111,18 +111,18 @@
 .contact-info-card {
   position: relative;
   z-index: 2;
-  background: oklch(100% 0 0 / 0.85);
+  background: #FFFFFF;
   backdrop-filter: blur(16px);
-  border: 1px solid oklch(90% 0.03 20 / 0.6);
+  border: 1px solid #E2E8F0;
   border-radius: 20px;
   padding: 32px;
-  box-shadow: 0 8px 30px oklch(40% 0.15 25 / 0.1);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
 }
 
 .contact-card-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: oklch(30% 0.03 20);
+  color: #1E293B;
   margin: 0 0 20px;
   position: relative;
   padding-bottom: 12px;
@@ -136,7 +136,7 @@
   width: 40px;
   height: 3px;
   border-radius: 3px;
-  background: oklch(55% 0.22 25);
+  background: #4F46E5;
 }
 
 /* ---------- Info list ---------- */
@@ -152,13 +152,13 @@
   gap: 12px;
   padding: 12px 14px;
   border-radius: 14px;
-  color: oklch(35% 0.02 20);
+  color: #334155;
   text-decoration: none;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 a.contact-info-item:hover {
-  background: oklch(95% 0.05 20 / 0.7);
+  background: #EEF2FF;
   transform: translateX(-2px);
 }
 
@@ -174,7 +174,7 @@ a.contact-info-item:hover {
   width: 42px;
   height: 42px;
   border-radius: 10px;
-  background: var(--red-5);
+  background: #4F46E5;
   color: white;
   flex-shrink: 0;
 }
@@ -183,14 +183,14 @@ a.contact-info-item:hover {
 .contact-socials {
   margin-top: 28px;
   padding-top: 24px;
-  border-top: 1px solid oklch(90% 0.03 20 / 0.6);
+  border-top: 1px solid #E2E8F0;
 }
 
 .contact-socials-label {
   display: block;
   font-size: 1.1rem;
   font-weight: 700;
-  color: oklch(30% 0.03 20);
+  color: #1E293B;
   text-align: center;
   margin-bottom: 18px;
 }
@@ -211,17 +211,17 @@ a.contact-info-item:hover {
   width: 60px;
   height: 60px;
   border-radius: 18px;
-  background: oklch(55% 0.22 25);
+  background: #4F46E5;
   color: white;
   transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 14px oklch(40% 0.15 25 / 0.12);
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
 }
 
 .contact-social-btn:hover {
-  background: oklch(92% 0.06 20 / 0.7);
-  color: oklch(45% 0.22 25);
+  background: #4338CA;
+  color: white;
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 20px oklch(40% 0.2 25 / 0.25);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.38);
 }
 
 /* ---------- Map ---------- */
@@ -231,7 +231,7 @@ a.contact-info-item:hover {
   margin-top: 20px;
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid oklch(90% 0.03 20 / 0.6);
+  border: 1px solid #E2E8F0;
   width: 100%;
   max-width: 600px;
   height: 450px;

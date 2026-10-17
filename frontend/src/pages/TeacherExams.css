@@ -203,7 +203,7 @@
 
   margin: 0;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.8rem;
   line-height: 1.8;
@@ -254,7 +254,7 @@
 .exams-search-icon,
 .exams-filter-icon {
   flex: 0 0 auto;
-  color: #95a5a6;
+  color: #94A3B8;
 }
 
 .exams-search-input {
@@ -492,7 +492,7 @@
 }
 
 .submissions-ratio-cell span {
-  color: #95a5a6;
+  color: #94A3B8;
   font-size: 0.7rem;
 }
 
@@ -535,7 +535,7 @@
 
 .teacher-exams-status-pill.no-subs,
 .teacher-exam-status-pill.no-subs {
-  color: #7f8c8d;
+  color: #64748B;
   background: #f4f6f7;
 }
 
@@ -568,13 +568,13 @@
 }
 
 .exam-action-btn:hover {
-  color: #c0392b;
+  color: #4338CA;
   border-color: #f0c7c3;
   background: #fff8f7;
 }
 
 .exam-action-btn.edit {
-  color: #c0392b;
+  color: #4338CA;
 }
 
 /* =========================================================
@@ -765,7 +765,7 @@ body.teacher-exams-modal-open {
 .modal-header-info p {
   margin: 0;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.73rem;
 
@@ -791,7 +791,7 @@ body.teacher-exams-modal-open {
   border: 0;
   border-radius: 9px;
 
-  color: #7f8c8d;
+  color: #64748B;
   background: #f6f7f8;
 
   cursor: pointer;
@@ -800,7 +800,7 @@ body.teacher-exams-modal-open {
 }
 
 .modal-close-btn:hover {
-  color: #c0392b;
+  color: #4338CA;
   background: #fff0ef;
 }
 
@@ -843,7 +843,7 @@ body.teacher-exams-modal-open {
 
   background: transparent;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-family: inherit;
 
@@ -858,12 +858,12 @@ body.teacher-exams-modal-open {
 }
 
 .roster-tab-btn:hover {
-  color: #c0392b;
+  color: #4338CA;
   background: #fff;
 }
 
 .roster-tab-btn.active {
-  color: #c0392b;
+  color: #4338CA;
 
   background: #fff;
 
@@ -944,7 +944,7 @@ body.teacher-exams-modal-open {
 
 .modal-cancel-btn:hover {
   border-color: #cbd2d6;
-  background: #f8f9fa;
+  background: #F8FAFC;
 }
 
 .modal-cancel-btn:disabled {
@@ -1008,7 +1008,7 @@ body.teacher-exams-modal-open {
 }
 
 .q-number-pill {
-  color: #c0392b;
+  color: #4338CA;
   background: #fff0ef;
 }
 
@@ -1055,7 +1055,7 @@ body.teacher-exams-modal-open {
 
   margin-bottom: 0.55rem;
 
-  color: #7f8c8d;
+  color: #64748B;
 
   font-size: 0.72rem;
   font-weight: 800;
@@ -1130,12 +1130,12 @@ body.teacher-exams-modal-open {
 }
 
 .q-score-input:focus {
-  border-color: #c0392b;
+  border-color: #4338CA;
   box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
 }
 
 .grading-live-score {
-  color: #c0392b !important;
+  color: #4338CA !important;
 }
 
 /* =========================================================

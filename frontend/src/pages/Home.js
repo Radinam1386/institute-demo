@@ -144,14 +144,14 @@ export default function Landing() {
               از مقدماتی تا پیشرفته، با تضمین نتیجه.
             </p>
 
-            {/* <div className="hero-cta reveal" ref={r}>
-              <AnimatedButton variant="danger" size="medium" icon="←">
-                <a href="#contact">ثبت‌نام در آموزشگاه</a>
+            <div className="hero-cta reveal" ref={r}>
+              <AnimatedButton variant="primary" size="medium">
+                <Link to="/courses" style={{ color: "#fff" }}>مشاهده دوره‌ها</Link>
               </AnimatedButton>
-              <AnimatedButton variant="ghost" size="medium">
-                <a href="#contact">مشاهده دوره‌ها</a>
+              <AnimatedButton variant="amber" size="medium">
+                <Link to="/contact" style={{ color: "#78350F" }}>مشاوره رایگان</Link>
               </AnimatedButton>
-            </div> */}
+            </div>
 
             <div className="hero-trust reveal" ref={r}>
               <div className="trust-item">
@@ -268,8 +268,8 @@ export default function Landing() {
               <p className="cta-desc">
                 جلسه مشاوره رایگان بگیرید و مسیر یادگیری خودتون رو با ما بسازید
               </p>
-              <AnimatedButton variant="danger">
-                <Link to="tel:02433454315">
+              <AnimatedButton variant="amber">
+                <Link to="/contact" style={{ color: "#78350F" }}>
                   تماس با ما
                 </Link>
               </AnimatedButton>

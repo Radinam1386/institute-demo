@@ -337,7 +337,7 @@
     linear-gradient(
       135deg,
       #ffffff,
-      #fff9f8
+      #F8FAFC
     );
 
   border: 1px solid #eeeeee;
@@ -604,11 +604,11 @@
 }
 
 .password-copy-btn.copied {
-  background: #edf8f1 !important;
+  background: #ECFDF5 !important;
 
-  color: #2e8b57 !important;
+  color: #10B981 !important;
 
-  border-color: #2e8b57 !important;
+  border-color: #10B981 !important;
 }
 
 /* =========================================================
@@ -649,7 +649,7 @@
     linear-gradient(
       135deg,
       #fff8f7,
-      #fff1ef
+      #EEF2FF
     );
 
   border-bottom: 2px solid var(--primary);
@@ -839,7 +839,7 @@
 .tuition-action-btn.revert {
   background: #fff2f0;
 
-  color: #c0392b;
+  color: #4338CA;
 
   border-color: #f3cfca;
 }
@@ -863,7 +863,7 @@
 .tuition-action-btn.delete:hover {
   background: #fff0ee;
 
-  color: #e74c3c;
+  color: #4F46E5;
 
   border-color: #f1c4bd;
 }
@@ -1137,7 +1137,7 @@
 .admin-student-details-x9p4-required {
   margin-right: 0.25rem;
 
-  color: #e74c3c;
+  color: #4F46E5;
 }
 
 .admin-student-details-x9p4-optional {
@@ -1208,7 +1208,7 @@
 
   padding: 0.75rem;
 
-  background: #fafafa;
+  background: #F8FAFC;
 
   border: 1px solid #eeeeee;
 
@@ -1267,7 +1267,7 @@
 
   padding: 0.85rem;
 
-  background: #fafafa;
+  background: #F8FAFC;
 
   border: 1px solid #eeeeee;
 
@@ -1345,7 +1345,7 @@
 
   border-right: 1px solid #eeeeee;
 
-  background: #fafafa;
+  background: #F8FAFC;
 
   color: #777;
 
@@ -1409,7 +1409,7 @@
 
   padding: 0.95rem;
 
-  background: #fafafa;
+  background: #F8FAFC;
 
   border: 1px solid #eeeeee;
 
@@ -1505,7 +1505,7 @@
 }
 
 .admin-student-details-x9p4-attendance-card.good {
-  color: #2e8b57;
+  color: #10B981;
   background: #f2faf5;
 }
 
@@ -1515,7 +1515,7 @@
 }
 
 .admin-student-details-x9p4-attendance-card.danger {
-  color: #c0392b;
+  color: #4338CA;
   background: #fff5f3;
 }
 

@@ -1061,7 +1061,7 @@ export default function TeacherExams() {
                                   <span
                                     style={{
                                       fontSize: "0.78rem",
-                                      color: "#95a5a6",
+                                      color: "#94A3B8",
                                     }}
                                   >
                                     امکان نمره‌دهی نیست
@@ -1255,15 +1255,15 @@ export default function TeacherExams() {
                                         style={{
                                           fontWeight: "800",
                                           color: isStudentCorrect
-                                            ? "#27ae60"
+                                            ? "#059669"
                                             : studentChoice
-                                              ? "#c0392b"
-                                              : "#7f8c8d",
+                                              ? "#4338CA"
+                                              : "#64748B",
                                           background: isStudentCorrect
                                             ? "#eaf8f0"
                                             : studentChoice
                                               ? "#fff5f5"
-                                              : "#f8f9fa",
+                                              : "#F8FAFC",
                                           padding: "3px 10px",
                                           borderRadius: "8px",
                                           border: isStudentCorrect
@@ -1293,7 +1293,7 @@ export default function TeacherExams() {
                                       <span
                                         style={{
                                           fontWeight: "800",
-                                          color: "#27ae60",
+                                          color: "#059669",
                                           background: "#eaf8f0",
                                           padding: "3px 10px",
                                           borderRadius: "8px",
@@ -1310,7 +1310,7 @@ export default function TeacherExams() {
                                       {isStudentCorrect ? (
                                         <span
                                           style={{
-                                            color: "#27ae60",
+                                            color: "#059669",
                                             fontSize: "0.82rem",
                                             fontWeight: "800",
                                           }}
@@ -1322,7 +1322,7 @@ export default function TeacherExams() {
                                       ) : studentChoice ? (
                                         <span
                                           style={{
-                                            color: "#c0392b",
+                                            color: "#4338CA",
                                             fontSize: "0.82rem",
                                             fontWeight: "800",
                                           }}
@@ -1332,7 +1332,7 @@ export default function TeacherExams() {
                                       ) : (
                                         <span
                                           style={{
-                                            color: "#7f8c8d",
+                                            color: "#64748B",
                                             fontSize: "0.82rem",
                                             fontWeight: "800",
                                           }}
@@ -1362,7 +1362,7 @@ export default function TeacherExams() {
                                       ) : (
                                         <span
                                           style={{
-                                            color: "#95a5a6",
+                                            color: "#94A3B8",
                                             fontStyle: "italic",
                                           }}
                                         >
@@ -1376,7 +1376,7 @@ export default function TeacherExams() {
                               ) : (
                                 <span
                                   style={{
-                                    color: "#95a5a6",
+                                    color: "#94A3B8",
                                     fontStyle: "italic",
                                   }}
                                 >
@@ -1411,7 +1411,7 @@ export default function TeacherExams() {
                               <span
                                 style={{
                                   fontSize: "0.82rem",
-                                  color: "#7f8c8d",
+                                  color: "#64748B",
                                 }}
                               >
                                 (از حداکثر {toPersianDigits(maxQuestionScore)}{" "}

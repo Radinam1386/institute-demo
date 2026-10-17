@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: oklch(98% 0.01 29);
+  background: #F8FAFC;
   padding: 2rem;
   text-align: center;
 }
@@ -68,7 +68,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 0.75rem;
-  box-shadow: 0 2px 8px oklch(52% 0.22 25 / 0.25);
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
 }
 
 .notfound-code {
@@ -111,7 +111,7 @@
 .notfound-blob-1 {
   width: 380px;
   height: 380px;
-  background: oklch(58% 0.22 25);
+  background: #4F46E5;
   top: -120px;
   right: -100px;
 }
@@ -119,7 +119,7 @@
 .notfound-blob-2 {
   width: 320px;
   height: 320px;
-  background: oklch(48% 0.2 20);
+  background: #4338CA;
   bottom: -100px;
   left: -80px;
   animation-delay: 3s;

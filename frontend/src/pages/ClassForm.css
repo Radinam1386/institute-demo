@@ -67,9 +67,9 @@
 }
 
 .class-form-page-container .classes-alert.success {
-  background: #edf8f1;
-  color: #2e8b57;
-  border: 1px solid #d9f0e1;
+  background: #ECFDF5;
+  color: #10B981;
+  border: 1px solid #D1FAE5;
 }
 
 .class-form-page-container .classes-alert.error {
@@ -103,7 +103,7 @@
   width: 100%;
   min-width: 0;
   background: #ffffff;
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 22px;
   padding: 2rem;
   box-shadow: 0 8px 25px rgba(37, 41, 45, 0.04);
@@ -164,7 +164,7 @@
 
 .class-form-card-header h2 {
   margin: 0;
-  color: #2d3436;
+  color: #1E293B;
   font-size: 1.15rem;
   font-weight: 800;
   line-height: 1.6;
@@ -174,7 +174,7 @@
 
 .class-form-card-header p {
   margin: 0.25rem 0 0;
-  color: #7f8c8d;
+  color: #64748B;
   font-size: 0.82rem;
   line-height: 1.8;
   overflow-wrap: anywhere;
@@ -211,7 +211,7 @@
   flex-wrap: wrap;
   gap: 0.15rem;
   min-width: 0;
-  color: #2d3436;
+  color: #1E293B;
   font-size: 0.86rem;
   font-weight: 700;
   line-height: 1.7;
@@ -235,8 +235,8 @@
   min-height: 46px;
   padding: 0.75rem 1rem;
   background: #ffffff;
-  color: #2d3436;
-  border: 1px solid #eceff3;
+  color: #1E293B;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   font-family: inherit;
   font-size: 0.88rem;
@@ -302,7 +302,7 @@
 .student-search-input-wrapper .search-icon {
   position: absolute;
   right: 0.85rem;
-  color: #7f8c8d;
+  color: #64748B;
   pointer-events: none;
   z-index: 1;
   flex: 0 0 auto;
@@ -313,9 +313,9 @@
   min-width: 0;
   min-height: 40px;
   padding: 0.55rem 2.4rem 0.55rem 0.85rem;
-  background: #f8f9fa;
-  color: #2d3436;
-  border: 1px solid #eceff3;
+  background: #F8FAFC;
+  color: #1E293B;
+  border: 1px solid #E2E8F0;
   border-radius: 10px;
   font-family: inherit;
   font-size: 0.84rem;
@@ -376,7 +376,7 @@
   gap: 0.8rem;
   padding: 0.7rem 0.9rem;
   background: #ffffff;
-  border: 1px solid #eceff3;
+  border: 1px solid #E2E8F0;
   border-radius: 14px;
   cursor: pointer;
   user-select: none;
@@ -395,7 +395,7 @@
 }
 
 .student-row-item.selected {
-  background: #fff7f5;
+  background: #F8FAFC;
   border-color: rgba(231, 76, 60, 0.38);
   box-shadow: 0 4px 15px rgba(231, 76, 60, 0.07);
 }
@@ -480,7 +480,7 @@
 
 .student-row-info strong {
   min-width: 0;
-  color: #2d3436;
+  color: #1E293B;
   font-size: 0.87rem;
   font-weight: 800;
   line-height: 1.6;
@@ -616,7 +616,7 @@
   gap: 1rem;
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid #f0f1f3;
+  border-top: 1px solid #F1F5F9;
 }
 
 .student-pagination-info {
@@ -1137,7 +1137,7 @@
     gap: 0.7rem;
 
     background: #fff;
-    border: 1px solid #eceff3;
+    border: 1px solid #E2E8F0;
     border-radius: 20px;
 
     box-shadow: 0 6px 22px rgba(37, 41, 45, 0.04);

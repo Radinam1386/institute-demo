@@ -247,7 +247,7 @@ function AdminSecretaryDetails() {
                   style={{
                     color: secretaryUser.is_active
                       ? "oklch(40% 0.15 145)"
-                      : "oklch(45% 0.18 25)",
+                      : "#3730A3",
                   }}
                 >
                   {secretaryUser.is_active ? "فعال" : "غیرفعال"}
@@ -293,7 +293,7 @@ function AdminSecretaryDetails() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "10px",
-                  background: "oklch(96% 0.02 29)",
+                  background: "#EEF2FF",
                   color: "var(--primary)",
                   display: "flex",
                   alignItems: "center",
@@ -335,7 +335,7 @@ function AdminSecretaryDetails() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "10px",
-                  background: "oklch(96% 0.02 29)",
+                  background: "#EEF2FF",
                   color: "var(--primary)",
                   display: "flex",
                   alignItems: "center",
@@ -377,7 +377,7 @@ function AdminSecretaryDetails() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "10px",
-                  background: "oklch(96% 0.02 29)",
+                  background: "#EEF2FF",
                   color: "var(--primary)",
                   display: "flex",
                   alignItems: "center",
@@ -419,7 +419,7 @@ function AdminSecretaryDetails() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "10px",
-                  background: "oklch(96% 0.02 29)",
+                  background: "#EEF2FF",
                   color: "var(--primary)",
                   display: "flex",
                   alignItems: "center",
@@ -493,8 +493,8 @@ function AdminSecretaryDetails() {
                 padding: "0.55rem 1rem",
                 borderRadius: "10px",
                 border: "1px solid oklch(60% 0.19 25 / 0.3)",
-                background: "oklch(97% 0.05 25 / 0.6)",
-                color: "oklch(45% 0.18 25)",
+                background: "#EEF2FF",
+                color: "#3730A3",
                 fontSize: "0.85rem",
                 fontWeight: "700",
                 cursor: "pointer",

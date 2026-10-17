@@ -1,22 +1,22 @@
 
 .admin-teachers-x7k2-root {
-  --admin-teachers-x7k2-primary: #e74c3c;
-  --admin-teachers-x7k2-primary-dark: #c0392b;
-  --admin-teachers-x7k2-primary-light: #fff1ef;
-  --admin-teachers-x7k2-primary-soft: #fdf7f6;
+  --admin-teachers-x7k2-primary: #4F46E5;
+  --admin-teachers-x7k2-primary-dark: #4338CA;
+  --admin-teachers-x7k2-primary-light: #EEF2FF;
+  --admin-teachers-x7k2-primary-soft: #F5F7FF;
 
-  --admin-teachers-x7k2-text: #2d3436;
-  --admin-teachers-x7k2-muted: #7f8c8d;
-  --admin-teachers-x7k2-border: #eceff3;
+  --admin-teachers-x7k2-text: #1E293B;
+  --admin-teachers-x7k2-muted: #64748B;
+  --admin-teachers-x7k2-border: #E2E8F0;
 
-  --admin-teachers-x7k2-green: #2e8b57;
-  --admin-teachers-x7k2-green-bg: #edf8f1;
+  --admin-teachers-x7k2-green: #10B981;
+  --admin-teachers-x7k2-green-bg: #ECFDF5;
 
-  --admin-teachers-x7k2-blue: #3578c8;
-  --admin-teachers-x7k2-blue-bg: #eef5ff;
+  --admin-teachers-x7k2-blue: #0284C7;
+  --admin-teachers-x7k2-blue-bg: #F0F9FF;
 
-  --admin-teachers-x7k2-orange: #d88922;
-  --admin-teachers-x7k2-orange-bg: #fff6e8;
+  --admin-teachers-x7k2-orange: #D97706;
+  --admin-teachers-x7k2-orange-bg: #FFFBEB;
 
   width: 100%;
 }
@@ -460,7 +460,7 @@
 
   color: var(--admin-teachers-x7k2-green);
 
-  border: 1px solid #d9f0e1;
+  border: 1px solid #D1FAE5;
 }
 
 .admin-teachers-x7k2-status.warning {

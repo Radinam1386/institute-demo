@@ -184,7 +184,7 @@
 
   color: oklch(25% 0 0);
 
-  background: oklch(98% 0.003 29);
+  background: #F8FAFC;
 
   border: 1px solid oklch(0% 0 0 / 0.08);
 
@@ -217,9 +217,9 @@
 .secretary-student-form-field textarea:focus {
   background: #ffffff;
 
-  border-color: oklch(60% 0.19 29 / 0.45);
+  border-color: rgba(79, 70, 229, 0.45);
 
-  box-shadow: 0 0 0 3px oklch(60% 0.19 29 / 0.08);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08);
 }
 
 .secretary-student-form-field input::placeholder,
@@ -276,7 +276,7 @@
 .secretary-student-password button:hover {
   color: var(--primary);
 
-  background: oklch(96% 0.04 29);
+  background: #EEF2FF;
 }
 .secretary-student-form-actions {
   display: flex;
@@ -314,7 +314,7 @@
 }
 
 .secretary-student-form-cancel:hover {
-  background: oklch(97% 0.005 29);
+  background: #F8FAFC;
 
   border-color: oklch(0% 0 0 / 0.13);
 }
@@ -344,7 +344,7 @@
 
   cursor: pointer;
 
-  box-shadow: 0 5px 15px oklch(60% 0.19 29 / 0.25);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.25);
 
   transition:
     transform 0.2s ease,
@@ -390,7 +390,7 @@
   border-radius: 9px;
 
   background: transparent;
-  color: #95a5a6;
+  color: #94A3B8;
 
   cursor: pointer;
 
@@ -400,8 +400,8 @@
 }
 
 .secretary-student-password-icon:hover {
-  background: var(--student-panel-red-light, #fff1f1);
-  color: var(--student-panel-red, #e74c3c);
+  background: var(--student-panel-red-light, #EEF2FF);
+  color: var(--student-panel-red, #4F46E5);
 }
 
 /* =========================================================
@@ -450,7 +450,7 @@
   flex: 1;
   background: var(--red-5);
   color: white;
-  border: 1px solid var(--student-panel-red, #e74c3c);
+  border: 1px solid var(--student-panel-red, #4F46E5);
   box-shadow: 0 4px 12px rgba(231, 76, 60, 0.18);
 }
 
@@ -483,9 +483,9 @@
 .secretary-student-password-copy:hover:not(:disabled) {
   transform: translateY(-1px);
 
-  background: var(--student-panel-red-light, #fff1f1);
+  background: var(--student-panel-red-light, #EEF2FF);
 
-  color: var(--student-panel-red, #e74c3c);
+  color: var(--student-panel-red, #4F46E5);
 
   border-color: rgba(231, 76, 60, 0.25);
 }
@@ -502,7 +502,7 @@
 
   margin-top: 0.45rem;
 
-  color: #95a5a6;
+  color: #94A3B8;
 
   font-size: 0.72rem;
   font-weight: 500;

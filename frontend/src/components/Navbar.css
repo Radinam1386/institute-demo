@@ -339,7 +339,7 @@
 
     box-shadow:
       0 5px 14px
-      oklch(60% 0.19 29 / 0.28);
+      rgba(79, 70, 229, 0.28);
 
     border: 1px solid
       oklch(100% 0 0 / 0.15);
@@ -416,8 +416,8 @@
     background:
       linear-gradient(
         180deg,
-        oklch(55.799% 0.17067 24.538),
-        oklch(34.475% 0.12887 27.358)
+        #312E81,
+        #1E1B4B
       );
 
     box-shadow:
@@ -540,7 +540,7 @@
       0.55rem;
 
     color:
-      oklch(88% 0.025 29);
+      #C7D2FE;
 
     background:
       oklch(100% 0 0 / 0.10);
@@ -638,7 +638,7 @@
       0.65rem;
 
     color:
-      oklch(82% 0.02 29);
+      #A5B4FC;
 
     font-size: 0.68rem;
 
@@ -672,7 +672,7 @@
     gap: 0.8rem;
 
     color:
-      oklch(78% 0.02 29);
+      #A5B4FC;
 
     background: transparent;
 
@@ -749,7 +749,7 @@
     height: 38px;
 
     color:
-      oklch(82% 0.02 29);
+      #A5B4FC;
 
     background:
       oklch(100% 0 0 / 0.07);

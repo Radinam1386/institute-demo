@@ -78,12 +78,12 @@
 
   background: var(
     --red-5,
-    oklch(55.799% 0.17067 24.538)
+    #4F46E5
   );
 
   color: #fff;
 
-  box-shadow: 0 6px 18px oklch(60% 0.19 29 / 0.25);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.25);
 }
 
 .class-details-title-box > div:last-child {
@@ -326,7 +326,7 @@
 
   background: var(
     --red-5,
-    oklch(55.799% 0.17067 24.538)
+    #4F46E5
   );
 
   color: #fff;
@@ -334,7 +334,7 @@
   font-size: 1.6rem;
   font-weight: 800;
 
-  box-shadow: 0 6px 18px oklch(60% 0.19 29 / 0.25);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.25);
 }
 
 .teacher-name {
@@ -359,9 +359,9 @@
 
   border-radius: 12px;
 
-  background: oklch(96% 0.02 29);
+  background: #EEF2FF;
 
-  color: var(--primary, oklch(55% 0.18 25));
+  color: var(--primary, #4F46E5);
 
   font-size: 0.78rem;
   font-weight: 700;
@@ -419,7 +419,7 @@
 
   margin-top: 0.5rem;
 
-  color: var(--primary, oklch(55% 0.18 25));
+  color: var(--primary, #4F46E5);
 
   font-size: 0.82rem;
   font-weight: 700;
@@ -463,12 +463,12 @@
 
   padding: 0.35rem 0.75rem;
 
-  background: oklch(97% 0.02 29);
+  background: #EEF2FF;
 
-  border: 1px solid oklch(60% 0.19 29 / 0.3);
+  border: 1px solid rgba(79, 70, 229, 0.3);
   border-radius: 8px;
 
-  color: var(--primary, oklch(55% 0.18 25));
+  color: var(--primary, #4F46E5);
 
   font-family: inherit;
   font-size: 0.8rem;
@@ -487,7 +487,7 @@
 .add-student-shortcut-btn:hover {
   background: var(
     --red-5,
-    oklch(55.799% 0.17067 24.538)
+    #4F46E5
   );
 
   color: #fff;
@@ -564,7 +564,7 @@
 
 .enrolled-table tbody tr:hover,
 .sessions-table tbody tr:hover {
-  background: oklch(98% 0.01 29);
+  background: #F8FAFC;
 }
 
 /* =========================================================
@@ -591,9 +591,9 @@
 
   border-radius: 50%;
 
-  background: oklch(95% 0.03 29);
+  background: #EEF2FF;
 
-  color: var(--primary, oklch(55% 0.18 25));
+  color: var(--primary, #4F46E5);
 
   font-size: 0.95rem;
   font-weight: 800;
@@ -657,8 +657,8 @@
 }
 
 .att-pill.low {
-  background: oklch(95% 0.05 25 / 0.8);
-  color: oklch(45% 0.18 25);
+  background: #EEF2FF;
+  color: #3730A3;
 }
 
 /* =========================================================
@@ -675,7 +675,7 @@
 
   border-radius: 6px;
 
-  background: oklch(97% 0.005 29);
+  background: #F8FAFC;
 
   color: oklch(35% 0 0);
 
@@ -705,7 +705,7 @@
 }
 
 .absent-count {
-  color: oklch(45% 0.18 25);
+  color: #3730A3;
   font-weight: 700;
 }
 
@@ -1474,7 +1474,7 @@
   flex-direction: column;
   gap: 0.2rem;
 
-  background: oklch(98% 0.008 29);
+  background: #F8FAFC;
   border-radius: 9px;
 
   padding: 0.6rem 0.7rem;
@@ -1569,7 +1569,7 @@
   flex-shrink: 0;
   color: var(
     --primary,
-    oklch(55% 0.18 25)
+    #4F46E5
   );
 }
 
@@ -1605,7 +1605,7 @@
 
   padding: 0.65rem 0.5rem;
 
-  background: oklch(98% 0.008 29);
+  background: #F8FAFC;
 }
 
 .session-stat svg {
@@ -1646,8 +1646,8 @@
 }
 
 .session-stat.absent {
-  color: oklch(45% 0.18 25);
-  background: oklch(97% 0.025 25);
+  color: #3730A3;
+  background: #EEF2FF;
 }
 
 .session-stat.other {

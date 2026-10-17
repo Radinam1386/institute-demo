@@ -4,8 +4,8 @@
    ========================================================= */
 
 .student-panel-page {
-  --sp-primary: var(--primary, oklch(55% 0.18 25));
-  --sp-red: var(--red-5, oklch(55.799% 0.17067 24.538));
+  --sp-primary: var(--primary, #4F46E5);
+  --sp-red: var(--red-5, #4F46E5);
 
   width: 100%;
   max-width: 1200px;
@@ -53,10 +53,10 @@
   padding: 0.85rem 1.1rem;
 
   border-radius: 12px;
-  background: oklch(95% 0.05 25 / 0.85);
+  background: #EEF2FF;
   border: 1px solid oklch(75% 0.15 25 / 0.3);
 
-  color: oklch(45% 0.18 25);
+  color: #3730A3;
   font-weight: 700;
   font-size: 0.88rem;
   line-height: 1.7;
@@ -116,7 +116,7 @@
 }
 
 .active-term-badge {
-  background: oklch(96% 0.02 29);
+  background: #EEF2FF;
   color: var(--sp-primary);
 
   padding: 0.3rem 0.75rem;
@@ -187,7 +187,7 @@
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 8px 20px oklch(60% 0.19 29 / 0.28);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.28);
 }
 
 .class-hero-info {
@@ -472,7 +472,7 @@
 
   padding: 0.85rem 1rem;
 
-  background: oklch(98% 0.003 29);
+  background: #F8FAFC;
 
   border: 1px solid oklch(0% 0 0 / 0.06);
 
@@ -571,8 +571,8 @@
 }
 
 .attendance-status-badge.absent {
-  background: oklch(95% 0.05 25 / 0.9);
-  color: oklch(45% 0.18 25);
+  background: #EEF2FF;
+  color: #3730A3;
 }
 
 .attendance-status-badge.late {
@@ -647,7 +647,7 @@
 
   padding: 1rem 1.15rem;
 
-  background: oklch(98% 0.003 29);
+  background: #F8FAFC;
 
   border: 1px solid oklch(0% 0 0 / 0.06);
 
@@ -684,7 +684,7 @@
 
   border-radius: 10px;
 
-  background: oklch(96% 0.02 29);
+  background: #EEF2FF;
 
   color: var(--sp-primary);
 
@@ -791,7 +791,7 @@
 
 .status-pill.in-progress {
   background: #fef5e7;
-  color: #d35400;
+  color: #B45309;
 
   border: 1px solid rgba(243, 156, 18, 0.4);
 
@@ -864,7 +864,7 @@
 }
 
 .btn-exam-action.resume {
-  background: linear-gradient(135deg, #f39c12, #e67e22);
+  background: linear-gradient(135deg, #F59E0B, #D97706);
   color: #fff;
 
   box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
@@ -877,9 +877,9 @@
 }
 
 .btn-exam-action.review {
-  background: oklch(96% 0.02 29);
+  background: #EEF2FF;
 
-  border: 1px solid oklch(60% 0.19 29 / 0.25);
+  border: 1px solid rgba(79, 70, 229, 0.25);
 
   color: var(--sp-primary);
 }

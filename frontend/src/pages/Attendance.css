@@ -5,21 +5,21 @@
 ========================================================= */
 
 .student-attendance-x8p4-root {
-  --student-attendance-x8p4-red: #e74c3c;
-  --student-attendance-x8p4-red-dark: #c0392b;
-  --student-attendance-x8p4-red-light: #fff1f1;
+  --student-attendance-x8p4-red: #4F46E5;
+  --student-attendance-x8p4-red-dark: #4338CA;
+  --student-attendance-x8p4-red-light: #EEF2FF;
   --student-attendance-x8p4-red-soft: #fdf5f4;
 
-  --student-attendance-x8p4-green: #27ae60;
+  --student-attendance-x8p4-green: #059669;
   --student-attendance-x8p4-green-light: #ecf9f1;
 
-  --student-attendance-x8p4-blue: #3498db;
+  --student-attendance-x8p4-blue: #0EA5E9;
   --student-attendance-x8p4-blue-light: #eef7fd;
 
-  --student-attendance-x8p4-amber: #f39c12;
+  --student-attendance-x8p4-amber: #F59E0B;
   --student-attendance-x8p4-amber-light: #fff7e8;
 
-  --student-attendance-x8p4-text: #2d3436;
+  --student-attendance-x8p4-text: #1E293B;
   --student-attendance-x8p4-text-soft: #66727d;
   --student-attendance-x8p4-muted: #98a2aa;
 

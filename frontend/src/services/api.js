@@ -1,3 +1,6 @@
+import { isDemoMode } from "../config/siteConfig";
+import { demoRequest } from "../demo/demoData";
+
 const API_BASE_URL =
   process.env.REACT_APP_API_BASE_URL ||
   (typeof window !== "undefined" &&
@@ -9,18 +12,18 @@ const API_BASE_URL =
 
 export const storage = {
   getToken() {
-    return localStorage.getItem("kish_auth_token");
+    return localStorage.getItem("demo_auth_token");
   },
 
   getUser() {
-    const raw = localStorage.getItem("kish_auth_user");
+    const raw = localStorage.getItem("demo_auth_user");
 
     if (!raw) return null;
 
     try {
       return JSON.parse(raw);
     } catch {
-      localStorage.removeItem("kish_auth_user");
+      localStorage.removeItem("demo_auth_user");
       return null;
     }
   },
@@ -44,13 +47,13 @@ export const storage = {
       throw new Error("اطلاعات ورود نامعتبر است.");
     }
 
-    localStorage.setItem("kish_auth_token", token);
-    localStorage.setItem("kish_auth_user", JSON.stringify(user));
+    localStorage.setItem("demo_auth_token", token);
+    localStorage.setItem("demo_auth_user", JSON.stringify(user));
   },
 
   clearSession() {
-    localStorage.removeItem("kish_auth_token");
-    localStorage.removeItem("kish_auth_user");
+    localStorage.removeItem("demo_auth_token");
+    localStorage.removeItem("demo_auth_user");
   },
 
   isAuthenticated() {
@@ -59,6 +62,10 @@ export const storage = {
 };
 
 async function request(path, options = {}) {
+  if (isDemoMode) {
+    return demoRequest(path, options);
+  }
+
   const token = storage.getToken();
 
   const headers = {
