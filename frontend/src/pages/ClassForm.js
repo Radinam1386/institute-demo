@@ -1,0 +1,641 @@
+import React, { useEffect, useMemo, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import {
+  BookOpen,
+  Calendar,
+  GraduationCap,
+  Users,
+  Save,
+  ArrowRight,
+  Search,
+  CheckSquare,
+  Square,
+  AlertCircle,
+  Sparkles,
+  CreditCard,
+  Clock,
+} from "lucide-react";
+
+import DashboardLayout from "../components/DashboardLayout";
+import { AnimatedButton } from "../components/AnimatedButton";
+import { api, getFullName, storage } from "../services/api";
+import { toPersianDigits } from "../utils/dateUtils";
+
+import "./ClassForm.css";
+
+export default function ClassForm() {
+  const { id } = useParams();
+  const isEdit = Boolean(id);
+  const navigate = useNavigate();
+  const currentUser = storage.getUser();
+  const role = currentUser?.role === "admin" ? "admin" : "secretary";
+  const roleTitle = role === "admin" ? "پنل مدیریت" : "پنل منشی";
+  const basePath = `/panel/${role}`;
+
+  const [name, setName] = useState("");
+  const [termId, setTermId] = useState("");
+  const [teacherId, setTeacherId] = useState("");
+  const [tuitionFee, setTuitionFee] = useState(2500000);
+  const [schedule, setSchedule] = useState(
+    "روزهای زوج (شنبه، دوشنبه، چهارشنبه)",
+  );
+  const [timeSlot, setTimeSlot] = useState("۱۶:۰۰ الی ۱۷:۳۰");
+  const [selectedStudentIds, setSelectedStudentIds] = useState([]);
+  const [studentSearch, setStudentSearch] = useState("");
+
+  const [terms, setTerms] = useState([]);
+  const [teachers, setTeachers] = useState([]);
+  const [allStudents, setAllStudents] = useState([]);
+  const [existingEnrollments, setExistingEnrollments] = useState([]);
+
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
+  const [successMsg, setSuccessMsg] = useState("");
+
+  const [studentPage, setStudentPage] = useState(1);
+  const STUDENTS_PER_PAGE = 10;
+
+  useEffect(() => {
+    let alive = true;
+
+    async function loadFormData() {
+      try {
+        setLoading(true);
+        setError("");
+
+        const [termsData, usersData] = await Promise.all([
+          api.terms.list(),
+          api.users.list(),
+        ]);
+
+        if (!alive) return;
+
+        setTerms(termsData || []);
+        const teacherUsers = (usersData || []).filter(
+          (u) => u.role === "teacher",
+        );
+        const studentUsers = (usersData || []).filter(
+          (u) => u.role === "student",
+        );
+
+        setTeachers(teacherUsers);
+        setAllStudents(studentUsers);
+
+        if (termsData?.length && !termId) {
+          const activeTerm = termsData.find((t) => t.is_active) || termsData[0];
+          setTermId(activeTerm.id);
+        }
+
+        if (teacherUsers?.length && !teacherId) {
+          setTeacherId(teacherUsers[0].id);
+        }
+
+        if (isEdit) {
+          const cls = await api.classrooms.get(id);
+          if (!alive) return;
+
+          setName(cls.name || "");
+          setTermId(cls.term || "");
+          setTeacherId(cls.teacher || "");
+          setTuitionFee(
+            cls.tuition_fee !== undefined ? cls.tuition_fee : 2500000,
+          );
+          setSchedule(cls.schedule || "روزهای زوج (شنبه، دوشنبه، چهارشنبه)");
+          setTimeSlot(cls.time_slot || "۱۶:۰۰ الی ۱۷:۳۰");
+
+          const enrollments = cls.enrollments || [];
+          setExistingEnrollments(enrollments);
+          setSelectedStudentIds(
+            enrollments.map((e) => e.student || e.student_detail?.id),
+          );
+        }
+      } catch (err) {
+        if (!alive) return;
+        setError(err.message || "خطا در دریافت اطلاعات فرم");
+      } finally {
+        if (alive) setLoading(false);
+      }
+    }
+
+    loadFormData();
+
+    return () => {
+      alive = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id, isEdit]);
+
+  const toggleStudent = (studentId) => {
+    setSelectedStudentIds((prev) =>
+      prev.includes(studentId)
+        ? prev.filter((sId) => sId !== studentId)
+        : [...prev, studentId],
+    );
+  };
+  const filteredStudents = useMemo(() => {
+    const q = studentSearch.trim().toLowerCase();
+
+    if (!q) return allStudents;
+
+    return allStudents.filter(
+      (s) =>
+        getFullName(s).toLowerCase().includes(q) ||
+        s.username?.toLowerCase().includes(q) ||
+        s.phone_number?.includes(q),
+    );
+  }, [allStudents, studentSearch]);
+
+  const totalStudentPages = Math.max(
+    1,
+    Math.ceil(filteredStudents.length / STUDENTS_PER_PAGE),
+  );
+
+  const paginatedStudents = useMemo(() => {
+    const start = (studentPage - 1) * STUDENTS_PER_PAGE;
+    return filteredStudents.slice(start, start + STUDENTS_PER_PAGE);
+  }, [filteredStudents, studentPage]);
+
+  useEffect(() => {
+    setStudentPage(1);
+  }, [studentSearch]);
+
+  useEffect(() => {
+    if (studentPage > totalStudentPages) {
+      setStudentPage(totalStudentPages);
+    }
+  }, [studentPage, totalStudentPages]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!name.trim()) {
+      setError("لطفاً نام کلاس را وارد کنید.");
+      return;
+    }
+    if (!termId) {
+      setError("لطفاً ترم تحصیلی را انتخاب کنید.");
+      return;
+    }
+    if (!teacherId) {
+      setError("لطفاً استاد مربوطه را انتخاب کنید.");
+      return;
+    }
+
+    try {
+      setSaving(true);
+      setError("");
+
+      const payload = {
+        name: name.trim(),
+        term: Number(termId),
+        teacher: Number(teacherId),
+        tuition_fee: Number(tuitionFee) || 0,
+        schedule: schedule.trim(),
+        time_slot: timeSlot.trim(),
+      };
+
+      let classroomId = id;
+
+      if (isEdit) {
+        await api.classrooms.update(id, payload);
+        const currentStudentIds = existingEnrollments.map(
+          (e) => e.student || e.student_detail?.id,
+        );
+        for (const enrollment of existingEnrollments) {
+          const stId = enrollment.student || enrollment.student_detail?.id;
+          if (!selectedStudentIds.includes(stId)) {
+            await api.enrollments.delete(enrollment.id);
+          }
+        }
+        for (const stId of selectedStudentIds) {
+          if (!currentStudentIds.includes(stId)) {
+            await api.enrollments.create({
+              classroom: Number(id),
+              student: Number(stId),
+              is_paid: false,
+            });
+          }
+        }
+      } else {
+        const newClass = await api.classrooms.create(payload);
+        classroomId = newClass.id;
+        for (const stId of selectedStudentIds) {
+          await api.enrollments.create({
+            classroom: Number(classroomId),
+            student: Number(stId),
+            is_paid: false,
+          });
+        }
+      }
+
+      setSuccessMsg("اطلاعات کلاس با موفقیت ذخیره شد.");
+      setTimeout(() => {
+        navigate(`${basePath}/classes`);
+      }, 1000);
+    } catch (err) {
+      setError(err.message || "خطا در ذخیره‌سازی کلاس");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <DashboardLayout
+      role={roleTitle}
+      title={isEdit ? "ویرایش کلاس" : "افزودن کلاس جدید"}
+      menuType={role}
+    >
+      <div className="class-form-page-container">
+        <div className="class-form-top-nav">
+          <Link to={`${basePath}/classes`} className="class-form-back-btn">
+            <ArrowRight size={18} />
+            <span>بازگشت به لیست کلاس‌ها</span>
+          </Link>
+        </div>
+
+        {error && (
+          <div
+            className="classes-alert error"
+            style={{ marginBottom: "1.25rem" }}
+          >
+            <AlertCircle size={18} />
+            <span>{error}</span>
+          </div>
+        )}
+
+        {successMsg && (
+          <div
+            className="classes-alert success"
+            style={{ marginBottom: "1.25rem" }}
+          >
+            <Sparkles size={18} />
+            <span>{successMsg}</span>
+          </div>
+        )}
+
+        {loading ? (
+          <div
+            style={{
+              textAlign: "center",
+              padding: "3.5rem",
+              color: "oklch(50% 0 0)",
+            }}
+          >
+            در حال بارگذاری اطلاعات فرم...
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="class-form-element">
+            <section className="class-form-card-section">
+              <div className="class-form-card-header">
+                <div className="class-form-card-icon">
+                  <BookOpen size={20} />
+                </div>
+                <div>
+                  <h2>مشخصات اصلی و مالی کلاس</h2>
+                  <p>
+                    نام دوره، ترم تحصیلی، مدرس و مبلغ مصوب شهریه را مشخص کنید.
+                  </p>
+                </div>
+              </div>
+
+              <div className="class-form-grid-layout">
+                <label className="class-form-field-wrapper full-col">
+                  <span>
+                    نام کلاس و روز برگزاری <b>*</b>
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="مثال: English Intermediate 2 - شنبه و چهارشنبه ساعت ۱۸"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </label>
+
+                <label className="class-form-field-wrapper">
+                  <span>
+                    <Calendar size={14} style={{ marginLeft: "4px" }} />
+                    ترم تحصیلی <b>*</b>
+                  </span>
+                  <select
+                    value={termId}
+                    onChange={(e) => setTermId(e.target.value)}
+                    required
+                  >
+                    <option value="">انتخاب ترم...</option>
+                    {terms.map((t) => (
+                      <option key={t.id} value={t.id}>
+                        {t.name} {t.is_active ? "(ترم فعال)" : "(بایگانی)"}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+
+                <label className="class-form-field-wrapper">
+                  <span>
+                    <GraduationCap size={14} style={{ marginLeft: "4px" }} />
+                    استاد / مدرس دوره <b>*</b>
+                  </span>
+                  <select
+                    value={teacherId}
+                    onChange={(e) => setTeacherId(e.target.value)}
+                    required
+                  >
+                    <option value="">انتخاب استاد...</option>
+                    {teachers.map((t) => (
+                      <option key={t.id} value={t.id}>
+                        {getFullName(t)} ({t.username})
+                      </option>
+                    ))}
+                  </select>
+                </label>
+
+                <label className="class-form-field-wrapper">
+                  <span>
+                    <Calendar size={14} style={{ marginLeft: "4px" }} />
+                    روزهای برگزاری کلاس
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="مثال: روزهای زوج (شنبه، دوشنبه، چهارشنبه)"
+                    value={schedule}
+                    onChange={(e) => setSchedule(e.target.value)}
+                  />
+                </label>
+
+                <label className="class-form-field-wrapper">
+                  <span>
+                    <Clock size={14} style={{ marginLeft: "4px" }} />
+                    ساعت و زمان برگزاری
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="مثال: ۱۶:۰۰ الی ۱۷:۳۰"
+                    value={timeSlot}
+                    onChange={(e) => setTimeSlot(e.target.value)}
+                  />
+                </label>
+
+                <label className="class-form-field-wrapper full-col">
+                  <span>
+                    <CreditCard size={14} style={{ marginLeft: "4px" }} />
+                    مبلغ مصوب شهریه کلاس (تومان) <b>*</b>
+                  </span>
+                  <input
+                    type="number"
+                    min="0"
+                    step="50000"
+                    placeholder="مثال: 2500000"
+                    value={tuitionFee}
+                    onChange={(e) => setTuitionFee(e.target.value)}
+                    required
+                  />
+                  <small className="tuition-preview-badge">
+                    مبلغ شهریه:{" "}
+                    {tuitionFee
+                      ? `${toPersianDigits(Number(tuitionFee).toLocaleString("fa-IR"))} تومان`
+                      : "۰ تومان"}
+                  </small>
+                </label>
+              </div>
+            </section>
+
+            {/* Card 2: Student Assignment */}
+            <section className="class-form-card-section">
+              <div className="class-form-card-header flex-header">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.85rem",
+                  }}
+                >
+                  <div className="class-form-card-icon users-icon">
+                    <Users size={20} />
+                  </div>
+                  <div>
+                    <h2>انتخاب دانش‌آموزان کلاس</h2>
+                    <p>
+                      دانش‌آموزانی که در این کلاس شرکت می‌کنند را انتخاب نمایید
+                      ({toPersianDigits(selectedStudentIds.length)} نفر
+                      انتخاب‌شده).
+                    </p>
+                  </div>
+                </div>
+
+                <div className="student-search-input-wrapper">
+                  <Search size={16} className="search-icon" />
+                  <input
+                    type="text"
+                    placeholder="جستجوی نام یا شماره دانش‌آموز..."
+                    value={studentSearch}
+                    onChange={(e) => setStudentSearch(e.target.value)}
+                  />
+                </div>
+              </div>
+
+              <div className="student-list-wrapper">
+                {paginatedStudents.length > 0 ? (
+                  <div className="student-list">
+                    {paginatedStudents.map((student, index) => {
+                      const isSelected = selectedStudentIds.includes(
+                        student.id,
+                      );
+                      const rowNumber =
+                        (studentPage - 1) * STUDENTS_PER_PAGE + index + 1;
+
+                      return (
+                        <div
+                          key={student.id}
+                          className={`student-row-item ${
+                            isSelected ? "selected" : ""
+                          }`}
+                          onClick={() => toggleStudent(student.id)}
+                        >
+                          <div className="student-row-number">
+                            {toPersianDigits(rowNumber)}
+                          </div>
+
+                          <div className="student-row-check">
+                            {isSelected ? (
+                              <CheckSquare size={19} className="check-active" />
+                            ) : (
+                              <Square size={19} className="check-inactive" />
+                            )}
+                          </div>
+
+                          <div className="student-row-main">
+                            <div className="student-avatar">
+                              {getFullName(student)?.charAt(0) || "؟"}
+                            </div>
+
+                            <div className="student-row-info">
+                              <strong>{getFullName(student)}</strong>
+
+                              <span>نام کاربری: {student.username || "—"}</span>
+                            </div>
+                          </div>
+
+                          <div className="student-row-phone">
+                            <span className="student-row-label">
+                              شماره تماس
+                            </span>
+                            <strong>
+                              {student.phone_number || "ثبت نشده"}
+                            </strong>
+                          </div>
+
+                          <div className="student-row-status">
+                            <span
+                              className={
+                                isSelected
+                                  ? "student-status selected-status"
+                                  : "student-status"
+                              }
+                            >
+                              {isSelected ? "انتخاب شده" : "انتخاب نشده"}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="student-empty-state">
+                    <div className="student-empty-icon">
+                      <Users size={25} />
+                    </div>
+
+                    <strong>دانش‌آموزی پیدا نشد</strong>
+
+                    <span>
+                      {studentSearch
+                        ? "نتیجه‌ای برای عبارت جستجو شده وجود ندارد."
+                        : "هنوز دانش‌آموزی برای نمایش وجود ندارد."}
+                    </span>
+                  </div>
+                )}
+
+                {filteredStudents.length > 0 && (
+                  <div className="student-pagination">
+                    <div className="student-pagination-info">
+                      نمایش
+                      <strong>
+                        {toPersianDigits(
+                          (studentPage - 1) * STUDENTS_PER_PAGE + 1,
+                        )}
+                      </strong>
+                      تا
+                      <strong>
+                        {toPersianDigits(
+                          Math.min(
+                            studentPage * STUDENTS_PER_PAGE,
+                            filteredStudents.length,
+                          ),
+                        )}
+                      </strong>
+                      از
+                      <strong>
+                        {toPersianDigits(filteredStudents.length)}
+                      </strong>
+                      دانش‌آموز
+                    </div>
+
+                    <div className="student-pagination-controls">
+                      <button
+                        type="button"
+                        className="student-pagination-btn"
+                        disabled={studentPage === 1}
+                        onClick={() =>
+                          setStudentPage((prev) => Math.max(1, prev - 1))
+                        }
+                      >
+                        قبلی
+                      </button>
+
+                      <div className="student-page-numbers">
+                        {Array.from(
+                          { length: totalStudentPages },
+                          (_, index) => index + 1,
+                        )
+                          .filter((page) => {
+                            if (totalStudentPages <= 5) return true;
+
+                            return (
+                              page === 1 ||
+                              page === totalStudentPages ||
+                              Math.abs(page - studentPage) <= 1
+                            );
+                          })
+                          .map((page, index, visiblePages) => {
+                            const previousPage = visiblePages[index - 1];
+
+                            return (
+                              <React.Fragment key={page}>
+                                {previousPage && page - previousPage > 1 && (
+                                  <span className="student-pagination-dots">
+                                    ...
+                                  </span>
+                                )}
+
+                                <button
+                                  type="button"
+                                  className={`student-page-number ${
+                                    studentPage === page ? "active" : ""
+                                  }`}
+                                  onClick={() => setStudentPage(page)}
+                                >
+                                  {toPersianDigits(page)}
+                                </button>
+                              </React.Fragment>
+                            );
+                          })}
+                      </div>
+
+                      <button
+                        type="button"
+                        className="student-pagination-btn"
+                        disabled={studentPage === totalStudentPages}
+                        onClick={() =>
+                          setStudentPage((prev) =>
+                            Math.min(totalStudentPages, prev + 1),
+                          )
+                        }
+                      >
+                        بعدی
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </section>
+
+            {/* Form Actions */}
+            <div className="class-form-submit-actions-edit">
+              <Link
+                to={`${basePath}/classes`}
+                className="m-2"
+              >
+                <AnimatedButton variant="ghost">انصراف</AnimatedButton>
+              </Link>
+
+              <AnimatedButton
+                variant="primary"
+                type="submit"
+                disabled={saving}
+                icon={<Save size={18} />}
+              >
+                {saving
+                  ? "در حال ذخیره‌سازی..."
+                  : isEdit
+                    ? "ذخیره تغییرات کلاس"
+                    : "ثبت و ایجاد کلاس"}
+              </AnimatedButton>
+            </div>
+          </form>
+        )}
+      </div>
+    </DashboardLayout>
+  );
+}

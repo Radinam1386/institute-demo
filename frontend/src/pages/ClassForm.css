@@ -1,0 +1,1561 @@
+/* =========================================================
+   CLASS FORM
+   Professional RTL Responsive Design
+   Desktop preserved — Tablet & Mobile hardened
+   ========================================================= */
+
+.class-form-page-container {
+  width: 100%;
+  max-width: 1300px;
+  min-width: 0;
+  margin: 0 auto;
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+.class-form-page-container *,
+.class-form-page-container *::before,
+.class-form-page-container *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   TOP NAVIGATION
+   ========================================================= */
+
+.class-form-top-nav {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.class-form-back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  color: var(--primary);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.class-form-back-btn:hover {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.class-form-page-container .classes-alert {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.class-form-page-container .classes-alert.success {
+  background: #edf8f1;
+  color: #2e8b57;
+  border: 1px solid #d9f0e1;
+}
+
+.class-form-page-container .classes-alert.error {
+  background: #ffe3e3;
+  color: #c92a2a;
+  border: 1px solid #ffc9c9;
+}
+
+.class-form-page-container .classes-alert svg {
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.class-form-element {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.class-form-card-section {
+  width: 100%;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #eceff3;
+  border-radius: 22px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(37, 41, 45, 0.04);
+}
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.class-form-card-header {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.class-form-card-header.flex-header {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.class-form-card-header > div {
+  min-width: 0;
+}
+
+.class-form-card-header.flex-header > div:first-child {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.class-form-card-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--red-5);
+  color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.2);
+}
+
+.class-form-card-icon.users-icon {
+  background: var(--red-5);
+  box-shadow: 0 6px 16px rgba(53, 120, 200, 0.2);
+}
+
+.class-form-card-icon svg {
+  flex: 0 0 auto;
+}
+
+.class-form-card-header h2 {
+  margin: 0;
+  color: #2d3436;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.class-form-card-header p {
+  margin: 0.25rem 0 0;
+  color: #7f8c8d;
+  font-size: 0.82rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* =========================================================
+   MAIN FORM GRID
+   ========================================================= */
+
+.class-form-grid-layout {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.class-form-field-wrapper {
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.class-form-field-wrapper.full-col {
+  grid-column: 1 / -1;
+}
+
+.class-form-field-wrapper > span {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+  min-width: 0;
+  color: #2d3436;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.class-form-field-wrapper > span svg {
+  flex: 0 0 auto;
+}
+
+.class-form-field-wrapper span b {
+  color: var(--primary);
+  margin-right: 0.15rem;
+}
+
+.class-form-field-wrapper input,
+.class-form-field-wrapper select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  color: #2d3436;
+  border: 1px solid #eceff3;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.class-form-field-wrapper input::placeholder {
+  color: #a0a7ad;
+  opacity: 1;
+}
+
+.class-form-field-wrapper select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+.class-form-field-wrapper input:focus,
+.class-form-field-wrapper select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.09);
+}
+
+.class-form-field-wrapper input:disabled,
+.class-form-field-wrapper select:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* =========================================================
+   TUITION
+   ========================================================= */
+
+.tuition-preview-badge {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   STUDENT HEADER
+   ========================================================= */
+
+.student-search-input-wrapper {
+  position: relative;
+  flex: 0 1 340px;
+  width: 340px;
+  min-width: 240px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.student-search-input-wrapper .search-icon {
+  position: absolute;
+  right: 0.85rem;
+  color: #7f8c8d;
+  pointer-events: none;
+  z-index: 1;
+  flex: 0 0 auto;
+}
+
+.student-search-input-wrapper input {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 0.55rem 2.4rem 0.55rem 0.85rem;
+  background: #f8f9fa;
+  color: #2d3436;
+  border: 1px solid #eceff3;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.84rem;
+  outline: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.student-search-input-wrapper input::placeholder {
+  color: #9aa1a7;
+}
+
+.student-search-input-wrapper input:focus {
+  background: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.08);
+}
+
+/* =========================================================
+   STUDENT LIST
+   ========================================================= */
+
+.student-list-wrapper {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.student-list {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+/* =========================================================
+   STUDENT ROW
+   Desktop: horizontal
+   Tablet: compact horizontal
+   Mobile: structured card
+   ========================================================= */
+
+.student-row-item {
+  width: 100%;
+  min-width: 0;
+  min-height: 72px;
+  display: grid;
+  grid-template-columns:
+    42px
+    30px
+    minmax(240px, 1.5fr)
+    minmax(150px, 0.8fr)
+    120px;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.7rem 0.9rem;
+  background: #ffffff;
+  border: 1px solid #eceff3;
+  border-radius: 14px;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.student-row-item:hover {
+  background: #fffafa;
+  border-color: rgba(231, 76, 60, 0.25);
+  box-shadow: 0 4px 14px rgba(37, 41, 45, 0.05);
+  transform: translateY(-1px);
+}
+
+.student-row-item.selected {
+  background: #fff7f5;
+  border-color: rgba(231, 76, 60, 0.38);
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.07);
+}
+
+/* =========================================================
+   ROW NUMBER
+   ========================================================= */
+
+.student-row-number {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f8fa;
+  color: #8b949e;
+  border-radius: 9px;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.student-row-item.selected .student-row-number {
+  background: #ffe8e4;
+  color: var(--primary);
+}
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.student-row-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-row-check svg {
+  flex: 0 0 auto;
+}
+
+.student-row-check .check-active {
+  color: var(--primary);
+}
+
+.student-row-check .check-inactive {
+  color: #b8bec5;
+}
+
+/* =========================================================
+   STUDENT MAIN
+   ========================================================= */
+
+.student-row-main {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.student-avatar {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--red-5);
+  color: #ffffff;
+  border-radius: 11px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.16);
+}
+
+.student-row-info {
+  min-width: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.student-row-info strong {
+  min-width: 0;
+  color: #2d3436;
+  font-size: 0.87rem;
+  font-weight: 800;
+  line-height: 1.6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.student-row-info span {
+  min-width: 0;
+  color: #8a9299;
+  font-size: 0.73rem;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+.student-row-phone {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.student-row-label {
+  color: #a0a7ad;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.student-row-phone strong {
+  min-width: 0;
+  color: #495057;
+  font-size: 0.78rem;
+  font-weight: 700;
+  direction: ltr;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.student-row-status {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.student-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 92px;
+  max-width: 100%;
+  padding: 0.4rem 0.7rem;
+  background: #f6f7f8;
+  color: #8a9299;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.student-status.selected-status {
+  background: #eaf8ef;
+  color: #29945a;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.student-empty-state {
+  width: 100%;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 2rem 1rem;
+  background: #fafbfc;
+  border: 1px dashed #dfe3e7;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.student-empty-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.35rem;
+  background: #f1f3f5;
+  color: #9aa1a7;
+  border-radius: 14px;
+}
+
+.student-empty-state strong {
+  color: #495057;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.student-empty-state span {
+  max-width: 100%;
+  color: #9aa1a7;
+  font-size: 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.student-pagination {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f1f3;
+}
+
+.student-pagination-info {
+  min-width: 0;
+  color: #8a9299;
+  font-size: 0.74rem;
+  line-height: 1.8;
+}
+
+.student-pagination-info strong {
+  color: #495057;
+  font-weight: 800;
+  margin: 0 0.15rem;
+}
+
+.student-pagination-controls {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.student-pagination-btn,
+.student-page-number {
+  height: 34px;
+  min-width: 34px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e7e9ec;
+  background: #ffffff;
+  color: #69727a;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.73rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.student-pagination-btn {
+  padding: 0 0.75rem;
+}
+
+.student-pagination-btn:hover:not(:disabled),
+.student-page-number:hover:not(.active) {
+  background: var(--red-5);
+  color: white;
+  border-color: rgba(231, 76, 60, 0.25);
+}
+
+.student-page-number.active {
+  background: var(--red-5);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.18);
+}
+
+.student-pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.student-page-numbers {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.student-pagination-dots {
+  color: #a0a7ad;
+  font-size: 0.75rem;
+  padding: 0 0.1rem;
+}
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .class-form-page-container {
+    max-width: 100%;
+  }
+
+  .class-form-card-section {
+    padding: 1.6rem;
+    border-radius: 20px;
+  }
+
+  .class-form-grid-layout {
+    gap: 1rem;
+  }
+
+  .student-search-input-wrapper {
+    flex: 1 1 280px;
+    width: auto;
+  }
+
+  .student-row-item {
+    grid-template-columns:
+      36px
+      28px
+      minmax(180px, 1.4fr)
+      minmax(120px, 0.8fr)
+      105px;
+    gap: 0.65rem;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .student-status {
+    min-width: 82px;
+    padding-inline: 0.5rem;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .class-form-card-section {
+    padding: 1.4rem;
+  }
+
+  .class-form-card-header {
+    align-items: flex-start;
+  }
+
+  .class-form-card-header.flex-header {
+    align-items: flex-start;
+  }
+
+  .class-form-card-header.flex-header > div:first-child {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .student-search-input-wrapper {
+    width: 100%;
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  /*
+    At this width the student row gets too cramped.
+    Convert it to a 2-column compact card.
+  */
+
+  .student-row-item {
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "number main check"
+      "number phone status";
+    align-items: center;
+    gap: 0.55rem 0.7rem;
+    padding: 0.75rem;
+  }
+
+  .student-row-number {
+    grid-area: number;
+    align-self: center;
+  }
+
+  .student-row-check {
+    grid-area: check;
+  }
+
+  .student-row-main {
+    grid-area: main;
+  }
+
+  .student-row-phone {
+    grid-area: phone;
+    padding-right: 0.05rem;
+  }
+
+  .student-row-status {
+    grid-area: status;
+    justify-self: end;
+  }
+
+  .student-row-phone {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .student-row-label {
+    font-size: 0.68rem;
+  }
+
+  .student-row-phone strong {
+    font-size: 0.74rem;
+  }
+
+  .student-avatar {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .student-row-info strong {
+    font-size: 0.82rem;
+  }
+
+  .student-row-info span {
+    font-size: 0.7rem;
+  }
+}
+
+/* =========================================================
+   MOBILE — 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .class-form-page-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .class-form-top-nav {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .class-form-back-btn {
+    max-width: 100%;
+    font-size: 0.82rem;
+    gap: 0.4rem;
+    line-height: 1.7;
+  }
+
+  .class-form-page-container .classes-alert {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.8rem;
+    border-radius: 11px;
+  }
+
+  .class-form-element {
+    gap: 1rem;
+  }
+
+  /* -----------------------------------------
+     Cards
+     ----------------------------------------- */
+
+  .class-form-card-section {
+    width: 100%;
+    padding: 1.1rem;
+    border-radius: 17px;
+  }
+
+  .class-form-card-header {
+    width: 100%;
+    gap: 0.7rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+  }
+
+  .class-form-card-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border-radius: 12px;
+  }
+
+  .class-form-card-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .class-form-card-header h2 {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .class-form-card-header p {
+    font-size: 0.76rem;
+    line-height: 1.8;
+  }
+
+  /* -----------------------------------------
+     Form
+     ----------------------------------------- */
+
+  .class-form-grid-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .class-form-field-wrapper,
+  .class-form-field-wrapper.full-col {
+    width: 100%;
+    min-width: 0;
+    grid-column: auto;
+  }
+
+  .class-form-field-wrapper > span {
+    font-size: 0.82rem;
+  }
+
+  .class-form-field-wrapper input,
+  .class-form-field-wrapper select {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.84rem;
+  }
+
+  .tuition-preview-badge {
+    font-size: 0.77rem;
+  }
+
+  /* -----------------------------------------
+     Student header
+     ----------------------------------------- */
+
+  .class-form-card-header.flex-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.9rem;
+  }
+
+  .class-form-card-header.flex-header > div:first-child {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .student-search-input-wrapper {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .student-search-input-wrapper input {
+    width: 100%;
+    min-height: 42px;
+    font-size: 0.8rem;
+  }
+
+  /* -----------------------------------------
+     Student rows
+     ----------------------------------------- */
+
+  .student-list {
+    gap: 0.55rem;
+  }
+
+  .student-row-item {
+    width: 100%;
+    min-height: 0;
+    grid-template-columns: 28px minmax(0, 1fr) 26px;
+    grid-template-areas:
+      "number main check"
+      "number phone status";
+    gap: 0.45rem 0.6rem;
+    padding: 0.75rem;
+    border-radius: 13px;
+  }
+
+  .student-row-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+
+  .student-row-check {
+    justify-content: center;
+  }
+
+  .student-row-check svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .student-row-main {
+    width: 100%;
+    min-width: 0;
+    gap: 0.6rem;
+  }
+
+  .student-avatar {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+  }
+
+  .student-row-info {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .student-row-info strong {
+    font-size: 0.81rem;
+    line-height: 1.5;
+  }
+
+  .student-row-info span {
+    font-size: 0.68rem;
+  }
+
+  .student-row-phone {
+    min-width: 0;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4rem;
+    overflow: hidden;
+  }
+
+  .student-row-label {
+    flex: 0 0 auto;
+    font-size: 0.64rem;
+  }
+
+  .student-row-phone strong {
+    min-width: 0;
+    font-size: 0.7rem;
+  }
+
+  .student-row-status {
+    min-width: 0;
+    justify-self: end;
+  }
+
+  .student-status {
+    min-width: 0;
+    padding: 0.32rem 0.55rem;
+    font-size: 0.62rem;
+    border-radius: 7px;
+  }
+
+  /* -----------------------------------------
+     Empty
+     ----------------------------------------- */
+
+  .student-empty-state {
+    min-height: 170px;
+    padding: 1.5rem 0.8rem;
+    border-radius: 13px;
+  }
+
+  .student-empty-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .student-empty-state strong {
+    font-size: 0.82rem;
+  }
+
+  .student-empty-state span {
+    font-size: 0.7rem;
+    line-height: 1.7;
+  }
+
+  /* -----------------------------------------
+     Pagination
+     ----------------------------------------- */
+
+  .student-pagination {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+  }
+
+  .student-pagination-info {
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  .student-pagination-controls {
+    width: 100%;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .student-pagination-btn {
+    height: 36px;
+    min-width: 52px;
+    padding: 0 0.65rem;
+  }
+
+  .student-page-number {
+    width: 34px;
+    height: 36px;
+    min-width: 34px;
+  }
+
+  .student-page-numbers {
+    gap: 0.2rem;
+  }
+
+  /* -----------------------------------------
+     Actions
+     ----------------------------------------- */
+
+  .class-form-submit-actions-edit {
+    width: 100%;
+    display: flex;
+    justify-content: space-between  ;
+    gap: 0.7rem;
+
+    background: #fff;
+    border: 1px solid #eceff3;
+    border-radius: 20px;
+
+    box-shadow: 0 6px 22px rgba(37, 41, 45, 0.04);
+  }
+
+  .class-form-submit-actions-edit > * {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .class-form-submit-actions-edit a,
+  .class-form-submit-actions-edit button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .class-form-cancel-btn {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.7rem 1rem;
+    font-size: 0.84rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE — 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .class-form-top-nav {
+    margin-bottom: 0.85rem;
+  }
+
+  .class-form-back-btn {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 0.76rem;
+  }
+
+  .class-form-page-container .classes-alert {
+    padding: 0.7rem 0.75rem;
+    font-size: 0.75rem;
+    gap: 0.55rem;
+  }
+
+  .class-form-element {
+    gap: 0.85rem;
+  }
+
+  .class-form-card-section {
+    padding: 0.85rem;
+    border-radius: 15px;
+  }
+
+  .class-form-card-header {
+    gap: 0.55rem;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.8rem;
+  }
+
+  .class-form-card-icon {
+    width: 37px;
+    height: 37px;
+    flex-basis: 37px;
+    border-radius: 10px;
+  }
+
+  .class-form-card-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .class-form-card-header h2 {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .class-form-card-header p {
+    margin-top: 0.15rem;
+    font-size: 0.68rem;
+    line-height: 1.75;
+  }
+
+  .class-form-grid-layout {
+    gap: 0.8rem;
+  }
+
+  .class-form-field-wrapper {
+    gap: 0.35rem;
+  }
+
+  .class-form-field-wrapper > span {
+    font-size: 0.76rem;
+    line-height: 1.6;
+  }
+
+  .class-form-field-wrapper input,
+  .class-form-field-wrapper select {
+    min-height: 42px;
+    padding: 0.58rem 0.7rem;
+    font-size: 0.78rem;
+    border-radius: 10px;
+  }
+
+  .tuition-preview-badge {
+    font-size: 0.7rem;
+  }
+
+  /* Student search */
+
+  .student-search-input-wrapper input {
+    min-height: 40px;
+    padding-right: 2.15rem;
+    font-size: 0.74rem;
+  }
+
+  .student-search-input-wrapper .search-icon {
+    right: 0.7rem;
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Student rows */
+
+  .student-row-item {
+    grid-template-columns: 25px minmax(0, 1fr) 23px;
+    gap: 0.4rem 0.5rem;
+    padding: 0.68rem;
+    border-radius: 12px;
+  }
+
+  .student-row-number {
+    width: 25px;
+    height: 25px;
+    border-radius: 8px;
+    font-size: 0.64rem;
+  }
+
+  .student-row-main {
+    gap: 0.5rem;
+  }
+
+  .student-avatar {
+    width: 33px;
+    height: 33px;
+    flex-basis: 33px;
+    border-radius: 9px;
+    font-size: 0.74rem;
+  }
+
+  .student-row-info strong {
+    font-size: 0.76rem;
+  }
+
+  .student-row-info span {
+    font-size: 0.63rem;
+  }
+
+  .student-row-check svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .student-row-phone {
+    gap: 0.3rem;
+  }
+
+  .student-row-label {
+    font-size: 0.59rem;
+  }
+
+  .student-row-phone strong {
+    font-size: 0.65rem;
+  }
+
+  .student-status {
+    padding: 0.28rem 0.45rem;
+    font-size: 0.57rem;
+  }
+
+  /* Pagination */
+
+  .student-pagination-info {
+    font-size: 0.64rem;
+  }
+
+  .student-pagination-btn {
+    min-width: 48px;
+    height: 34px;
+    padding-inline: 0.5rem;
+    font-size: 0.67rem;
+  }
+
+  .student-page-number {
+    width: 31px;
+    height: 34px;
+    min-width: 31px;
+    font-size: 0.66rem;
+  }
+
+  .student-pagination-controls {
+    gap: 0.22rem;
+  }
+
+  .student-page-numbers {
+    gap: 0.15rem;
+  }
+
+  .student-pagination-dots {
+    font-size: 0.65rem;
+  }
+
+  .class-form-submit-actions {
+    gap: 0.55rem;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES — 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .class-form-card-section {
+    padding: 0.7rem;
+    border-radius: 13px;
+  }
+
+  .class-form-card-header {
+    gap: 0.45rem;
+  }
+
+  .class-form-card-icon {
+    width: 33px;
+    height: 33px;
+    flex-basis: 33px;
+    border-radius: 9px;
+  }
+
+  .class-form-card-header h2 {
+    font-size: 0.83rem;
+  }
+
+  .class-form-card-header p {
+    font-size: 0.64rem;
+  }
+
+  .class-form-field-wrapper > span {
+    font-size: 0.71rem;
+  }
+
+  .class-form-field-wrapper input,
+  .class-form-field-wrapper select {
+    min-height: 40px;
+    padding: 0.52rem 0.62rem;
+    font-size: 0.73rem;
+  }
+
+  .student-search-input-wrapper input {
+    font-size: 0.7rem;
+  }
+
+  /*
+     On extremely narrow screens the phone/status
+     information becomes compact but remains readable.
+  */
+
+  .student-row-item {
+    grid-template-columns: 22px minmax(0, 1fr) 21px;
+    gap: 0.35rem 0.4rem;
+    padding: 0.6rem;
+  }
+
+  .student-row-number {
+    width: 22px;
+    height: 22px;
+    border-radius: 7px;
+    font-size: 0.59rem;
+  }
+
+  .student-avatar {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+    border-radius: 8px;
+    font-size: 0.68rem;
+  }
+
+  .student-row-main {
+    gap: 0.42rem;
+  }
+
+  .student-row-info strong {
+    font-size: 0.71rem;
+  }
+
+  .student-row-info span {
+    font-size: 0.59rem;
+  }
+
+  .student-row-check svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .student-row-label {
+    font-size: 0.54rem;
+  }
+
+  .student-row-phone strong {
+    font-size: 0.6rem;
+  }
+
+  .student-status {
+    padding: 0.24rem 0.38rem;
+    font-size: 0.53rem;
+  }
+
+  .student-pagination {
+    gap: 0.55rem;
+  }
+
+  .student-pagination-info {
+    font-size: 0.59rem;
+  }
+
+  .student-pagination-btn {
+    min-width: 43px;
+    height: 32px;
+    font-size: 0.62rem;
+  }
+
+  .student-page-number {
+    width: 29px;
+    min-width: 29px;
+    height: 32px;
+    font-size: 0.61rem;
+  }
+
+  .student-pagination-dots {
+    display: none;
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .student-row-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .class-form-back-btn:hover {
+    transform: none;
+  }
+
+  .class-form-cancel-btn:hover {
+    transform: none;
+  }
+
+  .student-row-item {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .student-pagination-btn,
+  .student-page-number,
+  .class-form-cancel-btn {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .class-form-back-btn,
+  .student-row-item,
+  .class-form-cancel-btn,
+  .class-form-field-wrapper input,
+  .class-form-field-wrapper select,
+  .student-search-input-wrapper input,
+  .student-pagination-btn,
+  .student-page-number {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   SAFETY — Prevent accidental horizontal overflow
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .class-form-page-container,
+  .class-form-element,
+  .class-form-card-section,
+  .class-form-card-header,
+  .class-form-grid-layout,
+  .student-list-wrapper,
+  .student-list,
+  .student-row-item,
+  .student-row-main,
+  .student-row-info,
+  .student-row-phone,
+  .student-pagination {
+    max-width: 100%;
+  }
+
+  .class-form-page-container img,
+  .class-form-page-container svg {
+    max-width: 100%;
+  }
+
+  .class-form-page-container input,
+  .class-form-page-container select,
+  .class-form-page-container button,
+  .class-form-page-container a {
+    max-width: 100%;
+  }
+}

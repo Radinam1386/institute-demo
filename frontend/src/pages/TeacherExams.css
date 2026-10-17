@@ -1,0 +1,1900 @@
+/* =========================================================
+   TEACHER EXAMS
+   Fully Responsive RTL Dashboard
+========================================================= */
+
+.teacher-exams-page-container {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  direction: rtl;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   BANNER
+========================================================= */
+
+.teacher-exams-banner {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1.2rem 1.35rem;
+  margin-bottom: 1.25rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(255, 248, 248, 0.98)
+    );
+
+  border: 1px solid #f0dddd;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.045);
+}
+
+.teacher-exams-banner .banner-icon {
+  flex: 0 0 auto;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  color: #fff;
+  background: var(--red-5);
+
+  box-shadow: 0 8px 18px rgba(192, 57, 43, 0.2);
+}
+
+.teacher-exams-banner > div:not(.banner-icon) {
+  min-width: 0;
+  flex: 1;
+}
+
+.teacher-exams-banner h3 {
+  margin: 0 0 0.35rem;
+
+  color: #263238;
+  font-size: 1rem;
+  font-weight: 900;
+
+  line-height: 1.7;
+}
+
+.teacher-exams-banner p {
+  margin: 0;
+
+  color: #7b858d;
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+.teacher-exams-banner > a {
+  flex: 0 0 auto;
+  margin-right: auto !important;
+  text-decoration: none;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.teacher-exams-alert {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+
+  border-radius: 13px;
+
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.teacher-exams-alert.success {
+  color: #18794e;
+  background: #ecfdf5;
+  border: 1px solid #c8f1dd;
+}
+
+.teacher-exams-alert.error {
+  color: #a93226;
+  background: #fff5f5;
+  border: 1px solid #f4d1d1;
+}
+
+.teacher-exams-alert span {
+  min-width: 0;
+  flex: 1;
+  line-height: 1.7;
+}
+
+.teacher-exams-alert button {
+  width: 30px;
+  height: 30px;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 8px;
+
+  color: inherit;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.teacher-exams-stats-grid {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+
+  margin-bottom: 1.25rem;
+}
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.teacher-exams-main-section {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  background: #fff;
+
+  border: 1px solid #edf0f2;
+  border-radius: 18px;
+
+  padding: 1.3rem;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.035);
+}
+
+.teacher-exams-section-header {
+  margin-bottom: 1rem;
+}
+
+.teacher-exams-heading {
+  min-width: 0;
+}
+
+.teacher-exams-section-title {
+  margin: 0 0 0.35rem;
+
+  color: #263238;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.teacher-exams-section-desc {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #7f8c8d;
+
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.teacher-exams-filters-row {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(180px, 1fr) minmax(180px, 1fr);
+
+  gap: 0.75rem;
+
+  margin-bottom: 1rem;
+}
+
+.exams-search-wrapper,
+.exams-select-wrapper {
+  min-width: 0;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e5e9ec;
+  border-radius: 11px;
+
+  background: #fff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.exams-search-wrapper:focus-within,
+.exams-select-wrapper:focus-within {
+  border-color: #d3544a;
+  box-shadow: 0 0 0 3px rgba(211, 84, 74, 0.08);
+}
+
+.exams-search-icon,
+.exams-filter-icon {
+  flex: 0 0 auto;
+  color: #95a5a6;
+}
+
+.exams-search-input {
+  width: 100%;
+  min-width: 0;
+
+  height: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #2c3e50;
+
+  font-family: inherit;
+  font-size: 0.82rem;
+}
+
+.exams-search-input::placeholder {
+  color: #aab2b7;
+}
+
+.exams-select {
+  width: 100%;
+  min-width: 0;
+
+  height: 100%;
+
+  padding: 0 0.5rem 0 0.8rem;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #34495e;
+
+  font-family: inherit;
+  font-size: 0.8rem;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.teacher-exams-table-wrapper {
+  width: 100%;
+  min-width: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  -webkit-overflow-scrolling: touch;
+
+  border: 1px solid #edf0f2;
+  border-radius: 14px;
+
+  scrollbar-width: thin;
+}
+
+.teacher-exams-table {
+  width: 100%;
+  min-width: 900px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  direction: rtl;
+}
+
+.teacher-exams-table th {
+  padding: 0.85rem 0.75rem;
+
+  background: #f8fafb;
+
+  color: #718096;
+
+  border-bottom: 1px solid #edf0f2;
+
+  font-size: 0.74rem;
+  font-weight: 900;
+
+  white-space: nowrap;
+}
+
+.teacher-exams-table td {
+  padding: 0.85rem 0.75rem;
+
+  border-bottom: 1px solid #f0f2f4;
+
+  color: #46535c;
+
+  font-size: 0.78rem;
+
+  vertical-align: middle;
+}
+
+.teacher-exams-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.teacher-exams-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.teacher-exams-table tbody tr:hover {
+  background: #fffafa;
+}
+
+/* =========================================================
+   EXAM TITLE
+========================================================= */
+
+.exam-title-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  min-width: 180px;
+}
+
+.exam-title-cell > div:last-child {
+  min-width: 0;
+}
+
+.exams-icon-circle {
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  background: var(--red-5);
+
+  border-radius: 10px;
+}
+
+.exam-title-cell strong {
+  display: block;
+
+  color: #2c3e50;
+
+  font-size: 0.8rem;
+  font-weight: 900;
+
+  line-height: 1.6;
+
+  overflow-wrap: anywhere;
+}
+
+.exam-title-cell small {
+  display: block;
+
+  margin-top: 0.15rem;
+
+  color: #9aa4aa;
+
+  font-size: 0.68rem;
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.class-tag-badge-exams,
+.shamsi-date-pill,
+.questions-count-badge-exams,
+.user-code-tag,
+.no-score-tag {
+  display: inline-flex;
+  align-items: center;
+
+  max-width: 100%;
+
+  white-space: nowrap;
+}
+
+.class-tag-badge-exams {
+  padding: 0.35rem 0.65rem;
+
+  color: #52616b;
+  background: #f5f7f8;
+
+  border: 1px solid #e8ecee;
+  border-radius: 8px;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.shamsi-date-pill {
+  padding: 0.35rem 0.6rem;
+
+  color: #607d8b;
+  background: #f7f9fa;
+
+  border-radius: 8px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.questions-count-badge-exams {
+  padding: 0.35rem 0.6rem;
+
+  color: #8e44ad;
+  background: #faf5fc;
+
+  border-radius: 8px;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.submissions-ratio-cell {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+
+  white-space: nowrap;
+}
+
+.submissions-ratio-cell .subs-active {
+  color: #2980b9;
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.submissions-ratio-cell span {
+  color: #95a5a6;
+  font-size: 0.7rem;
+}
+
+.avg-score-text {
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.teacher-exams-status-pill,
+.teacher-exam-status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+
+  max-width: 100%;
+
+  padding: 0.38rem 0.65rem;
+
+  border-radius: 8px;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+
+  line-height: 1.5;
+  text-align: center;
+}
+
+.teacher-exams-status-pill.graded,
+.teacher-exam-status-pill.graded {
+  color: #1e8449;
+  background: #ecf9f1;
+}
+
+.teacher-exams-status-pill.pending,
+.teacher-exam-status-pill.pending {
+  color: #b9770e;
+  background: #fff8e7;
+}
+
+.teacher-exams-status-pill.no-subs,
+.teacher-exam-status-pill.no-subs {
+  color: #7f8c8d;
+  background: #f4f6f7;
+}
+
+.exam-action-btn {
+  min-height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  padding: 0.45rem 0.7rem;
+
+  border: 1px solid #e5e9ec;
+  border-radius: 9px;
+
+  background: #fff;
+
+  color: #34495e;
+
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+
+.exam-action-btn:hover {
+  color: #c0392b;
+  border-color: #f0c7c3;
+  background: #fff8f7;
+}
+
+.exam-action-btn.edit {
+  color: #c0392b;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.exams-empty-state {
+  padding: 4rem 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #a5afb5;
+}
+
+.exams-empty-state h4 {
+  margin: 1rem 0 0.35rem;
+
+  color: #52616b;
+
+  font-size: 0.95rem;
+}
+
+.exams-empty-state p {
+  max-width: 450px;
+
+  margin: 0;
+
+  color: #9aa4aa;
+
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   MODAL ROOT
+========================================================= */
+
+.teacher-exams-modal-root {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  direction: rtl;
+
+  pointer-events: none;
+}
+
+.teacher-exams-modal-root--roster {
+  z-index: 99999;
+}
+
+.teacher-exams-modal-root--grading {
+  z-index: 100000;
+}
+
+body.teacher-exams-modal-open {
+  overflow: hidden;
+}
+
+/* =========================================================
+   MODAL BACKDROP
+========================================================= */
+
+.exam-modal-backdrop {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  background: rgba(15, 23, 42, 0.58);
+
+  backdrop-filter: blur(4px);
+
+  pointer-events: auto;
+
+  overflow: auto;
+}
+
+/* =========================================================
+   MODAL CONTAINER
+========================================================= */
+
+.exam-modal-container {
+  width: min(100%, 900px);
+
+  max-height: calc(100dvh - 2rem);
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.2),
+    0 5px 20px rgba(0, 0, 0, 0.08);
+
+  pointer-events: auto;
+}
+
+.exam-modal-container.large {
+  width: min(1100px, 100%);
+}
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.exam-modal-header {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding: 1.15rem 1.25rem;
+
+  border-bottom: 1px solid #edf0f2;
+
+  background: #fff;
+}
+
+.modal-header-info {
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.teacher-exam-modal-icon-badge {
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  background: var(--red-5);
+
+  border-radius: 12px;
+}
+
+.modal-header-info > div:last-child {
+  min-width: 0;
+}
+
+.modal-header-info h4 {
+  margin: 0 0 0.35rem;
+
+  color: #263238;
+
+  font-size: 0.95rem;
+  font-weight: 900;
+
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+}
+
+.modal-header-info p {
+  margin: 0;
+
+  color: #7f8c8d;
+
+  font-size: 0.73rem;
+
+  line-height: 1.8;
+
+  overflow-wrap: anywhere;
+}
+
+.modal-header-info strong {
+  color: #34495e;
+}
+
+.modal-close-btn {
+  width: 36px;
+  height: 36px;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 9px;
+
+  color: #7f8c8d;
+  background: #f6f7f8;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  color: #c0392b;
+  background: #fff0ef;
+}
+
+/* =========================================================
+   ROSTER TABS
+========================================================= */
+
+.modal-roster-tabs {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  gap: 0.35rem;
+
+  padding: 0.65rem 1rem;
+
+  border-bottom: 1px solid #edf0f2;
+
+  background: #fafbfc;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-roster-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.roster-tab-btn {
+  flex: 0 0 auto;
+
+  min-height: 36px;
+
+  padding: 0.45rem 0.75rem;
+
+  border: 1px solid transparent;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #7f8c8d;
+
+  font-family: inherit;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+
+.roster-tab-btn:hover {
+  color: #c0392b;
+  background: #fff;
+}
+
+.roster-tab-btn.active {
+  color: #c0392b;
+
+  background: #fff;
+
+  border-color: #f0d3d0;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.035);
+}
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.exam-modal-body {
+  flex: 1 1 auto;
+
+  min-height: 0;
+
+  padding: 1rem;
+
+  overflow: auto;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.exam-modal-body.modal-scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   MODAL TABLE
+========================================================= */
+
+.modal-table {
+  min-width: 820px;
+}
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.exam-modal-footer {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 0.7rem;
+
+  padding: 0.9rem 1rem;
+
+  border-top: 1px solid #edf0f2;
+
+  background: #fff;
+}
+
+.modal-cancel-btn {
+  min-height: 40px;
+
+  padding: 0.55rem 1rem;
+
+  border: 1px solid #e4e8ea;
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: #607d8b;
+
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.modal-cancel-btn:hover {
+  border-color: #cbd2d6;
+  background: #f8f9fa;
+}
+
+.modal-cancel-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   GRADING
+========================================================= */
+
+.grading-questions-list {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.9rem;
+}
+
+.grading-q-card {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  padding: 1rem;
+
+  border: 1px solid #e9edef;
+  border-radius: 14px;
+
+  background: #fbfcfd;
+}
+
+.grading-q-header {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 0.45rem;
+
+  margin-bottom: 0.8rem;
+}
+
+.q-number-pill,
+.q-type-badge,
+.q-score-tag {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 28px;
+
+  padding: 0.3rem 0.55rem;
+
+  border-radius: 7px;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.q-number-pill {
+  color: #c0392b;
+  background: #fff0ef;
+}
+
+.q-type-badge {
+  color: #546e7a;
+  background: #f1f4f5;
+}
+
+.q-score-tag {
+  margin-right: auto;
+
+  color: #8e44ad;
+  background: #faf4fc;
+}
+
+.grading-q-text {
+  margin: 0 0 0.9rem;
+
+  color: #263238;
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  line-height: 1.9;
+
+  overflow-wrap: anywhere;
+}
+
+.student-ans-block {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  padding: 0.85rem;
+
+  border-radius: 11px;
+
+  background: #f4f6f8;
+}
+
+.ans-label {
+  display: block;
+
+  margin-bottom: 0.55rem;
+
+  color: #7f8c8d;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.ans-content-box {
+  width: 100% !important;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  overflow-wrap: anywhere;
+}
+
+.ans-content-box p {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.teacher-score-input-row {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 0.65rem;
+
+  margin-top: 0.85rem;
+
+  padding-top: 0.8rem;
+
+  border-top: 1px dashed #e0e5e8;
+}
+
+.teacher-score-input-row label {
+  color: #34495e;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.q-score-input {
+  width: 100px;
+  height: 40px;
+
+  box-sizing: border-box;
+
+  padding: 0 0.65rem;
+
+  border: 1px solid #dfe5e8;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #fff;
+
+  color: #2c3e50;
+
+  font-family: inherit;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  text-align: center;
+
+  transition: all 0.2s ease;
+}
+
+.q-score-input:focus {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
+}
+
+.grading-live-score {
+  color: #c0392b !important;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+  .teacher-exams-main-section {
+    padding: 1.5rem;
+  }
+
+  .teacher-exams-banner {
+    padding: 1.35rem 1.5rem;
+  }
+
+  .teacher-exams-stats-grid {
+    gap: 1.2rem;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .teacher-exams-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .teacher-exams-filters-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .exams-search-wrapper {
+    grid-column: 1 / -1;
+  }
+
+  .teacher-exams-main-section {
+    padding: 1.1rem;
+  }
+}
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .teacher-exams-banner {
+    align-items: flex-start;
+
+    padding: 1rem;
+
+    border-radius: 15px;
+  }
+
+  .teacher-exams-banner .banner-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .teacher-exams-banner h3 {
+    font-size: 0.9rem;
+  }
+
+  .teacher-exams-banner p {
+    font-size: 0.75rem;
+  }
+
+  .teacher-exams-banner > a {
+    width: 100%;
+    margin-top: 0.85rem;
+
+    margin-right: 0 !important;
+  }
+
+  .teacher-exams-banner > a > * {
+    width: 100%;
+  }
+
+  .teacher-exams-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .teacher-exams-main-section {
+    padding: 0.9rem;
+
+    border-radius: 15px;
+  }
+
+  .teacher-exams-filters-row {
+    grid-template-columns: 1fr;
+  }
+
+  .exams-search-wrapper {
+    grid-column: auto;
+  }
+
+  .teacher-exams-section-title {
+    font-size: 0.95rem;
+  }
+
+  .teacher-exams-section-desc {
+    font-size: 0.74rem;
+  }
+
+  .exam-modal-backdrop {
+    align-items: flex-start;
+
+    padding: 0.65rem;
+  }
+
+  .exam-modal-container,
+  .exam-modal-container.large {
+    width: 100%;
+
+    max-height: calc(100dvh - 1.3rem);
+
+    border-radius: 16px;
+  }
+
+  .exam-modal-header {
+    padding: 0.9rem;
+  }
+
+  .teacher-exam-modal-icon-badge {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-header-info h4 {
+    font-size: 0.84rem;
+  }
+
+  .modal-header-info p {
+    font-size: 0.68rem;
+  }
+
+  .exam-modal-body {
+    padding: 0.75rem;
+  }
+
+  .exam-modal-footer {
+    padding: 0.75rem;
+
+    flex-wrap: wrap;
+  }
+
+  .exam-modal-footer .modal-cancel-btn,
+  .exam-modal-footer button,
+  .exam-modal-footer a {
+    min-height: 42px;
+  }
+
+  .exam-modal-footer .modal-cancel-btn {
+    flex: 1;
+  }
+
+  .exam-modal-footer > * {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .teacher-exams-page-container {
+    padding: 0;
+  }
+
+  .teacher-exams-banner {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+
+    gap: 0.75rem;
+  }
+
+  .teacher-exams-banner > a {
+    grid-column: 1 / -1;
+  }
+
+  .teacher-exams-banner h3 {
+    line-height: 1.8;
+  }
+
+  .teacher-exams-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .teacher-exams-main-section {
+    border-radius: 13px;
+    padding: 0.75rem;
+  }
+
+  /*
+    موبایل:
+    جدول اصلی دیگر یک جدول عریض نیست.
+    هر row به کارت تبدیل می‌شود.
+  */
+
+  .teacher-exams-table-wrapper {
+    overflow: visible;
+
+    border: 0;
+    border-radius: 0;
+  }
+
+  .teacher-exams-table {
+    width: 100%;
+    min-width: 0;
+
+    display: block;
+  }
+
+  .teacher-exams-table thead {
+    display: none;
+  }
+
+  .teacher-exams-table tbody {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.75rem;
+  }
+
+  .teacher-exams-table tbody tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+
+    padding: 0.2rem 0;
+
+    border: 1px solid #e9edef;
+    border-radius: 13px;
+
+    background: #fff;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.035);
+
+    overflow: hidden;
+  }
+
+  .teacher-exams-table tbody tr:hover {
+    background: #fff;
+  }
+
+  .teacher-exams-table td {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0.65rem 0.7rem;
+
+    border-bottom: 1px solid #f0f2f4;
+
+    font-size: 0.72rem;
+  }
+
+  .teacher-exams-table td:last-child {
+    border-bottom: 0;
+  }
+
+  /*
+    عنوان آزمون تمام عرض
+  */
+
+  .teacher-exams-table td:nth-child(1) {
+    grid-column: 1 / -1;
+
+    padding: 0.85rem 0.75rem;
+
+    border-bottom: 1px solid #edf0f2;
+  }
+
+  /*
+    کلاس
+  */
+
+  .teacher-exams-table td:nth-child(2) {
+    grid-column: 1;
+  }
+
+  /*
+    تاریخ
+  */
+
+  .teacher-exams-table td:nth-child(3) {
+    grid-column: 2;
+  }
+
+  /*
+    سوالات
+  */
+
+  .teacher-exams-table td:nth-child(4) {
+    grid-column: 1;
+  }
+
+  /*
+    پاسخ برگ
+  */
+
+  .teacher-exams-table td:nth-child(5) {
+    grid-column: 2;
+  }
+
+  /*
+    میانگین
+  */
+
+  .teacher-exams-table td:nth-child(6) {
+    grid-column: 1;
+  }
+
+  /*
+    وضعیت
+  */
+
+  .teacher-exams-table td:nth-child(7) {
+    grid-column: 2;
+  }
+
+  /*
+    عملیات تمام عرض
+  */
+
+  .teacher-exams-table td:nth-child(8) {
+    grid-column: 1 / -1;
+
+    justify-content: stretch;
+
+    padding: 0.7rem;
+
+    border-top: 1px solid #edf0f2;
+    border-bottom: 0;
+  }
+
+  .teacher-exams-table td:nth-child(8) .exam-action-btn {
+    width: 100%;
+  }
+
+  .exam-title-cell {
+    width: 100%;
+  }
+
+  .exam-title-cell strong {
+    font-size: 0.78rem;
+  }
+
+  .exam-title-cell small {
+    font-size: 0.65rem;
+  }
+
+  .exams-icon-circle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .class-tag-badge-exams,
+  .shamsi-date-pill,
+  .questions-count-badge-exams {
+    font-size: 0.65rem;
+  }
+
+  .exams-status-pill {
+    white-space: normal;
+
+    text-align: right;
+
+    justify-content: flex-start;
+  }
+
+  /* =======================================================
+     MOBILE MODAL
+  ======================================================= */
+
+  .exam-modal-backdrop {
+    padding: 0.4rem;
+  }
+
+  .exam-modal-container,
+  .exam-modal-container.large {
+    width: 100%;
+
+    max-height: calc(100dvh - 0.8rem);
+
+    border-radius: 14px;
+  }
+
+  .exam-modal-header {
+    gap: 0.6rem;
+
+    padding: 0.75rem;
+  }
+
+  .modal-header-info {
+    gap: 0.6rem;
+  }
+
+  .teacher-exam-modal-icon-badge {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 9px;
+  }
+
+  .modal-header-info h4 {
+    font-size: 0.78rem;
+
+    line-height: 1.8;
+  }
+
+  .modal-header-info p {
+    font-size: 0.62rem;
+
+    line-height: 1.9;
+  }
+
+  .modal-close-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  /*
+    Tabs
+  */
+
+  .modal-roster-tabs {
+    padding: 0.5rem;
+
+    gap: 0.3rem;
+  }
+
+  .roster-tab-btn {
+    min-height: 34px;
+
+    padding: 0.4rem 0.6rem;
+
+    font-size: 0.65rem;
+  }
+
+  /*
+    Modal body
+  */
+
+  .exam-modal-body {
+    padding: 0.6rem;
+  }
+
+  /*
+    جدول داخل Modal هم کارت می‌شود
+  */
+
+  .modal-table {
+    min-width: 0;
+  }
+
+  .modal-table tbody {
+    gap: 0.65rem;
+  }
+
+  .modal-table tbody tr {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 0;
+  }
+
+  .modal-table tbody td {
+    padding: 0.6rem;
+  }
+
+  /*
+    نام دانش‌آموز
+  */
+
+  .modal-table td:nth-child(1) {
+    grid-column: 1 / -1;
+
+    padding: 0.75rem;
+
+    font-size: 0.75rem;
+  }
+
+  /*
+    username
+  */
+
+  .modal-table td:nth-child(2) {
+    grid-column: 1;
+  }
+
+  /*
+    status
+  */
+
+  .modal-table td:nth-child(3) {
+    grid-column: 2;
+  }
+
+  /*
+    submitted time
+  */
+
+  .modal-table td:nth-child(4) {
+    grid-column: 1;
+  }
+
+  /*
+    score
+  */
+
+  .modal-table td:nth-child(5) {
+    grid-column: 2;
+  }
+
+  /*
+    grading status
+  */
+
+  .modal-table td:nth-child(6) {
+    grid-column: 1;
+  }
+
+  /*
+    operation
+  */
+
+  .modal-table td:nth-child(7) {
+    grid-column: 2;
+
+    justify-content: flex-start;
+  }
+
+  .modal-table td:nth-child(7) .exam-action-btn {
+    width: 100%;
+  }
+
+  .user-code-tag {
+    max-width: 100%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .exam-status-pill {
+    max-width: 100%;
+
+    white-space: normal;
+
+    font-size: 0.62rem;
+  }
+
+  /*
+    Footer
+  */
+
+  .exam-modal-footer {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.55rem;
+
+    padding: 0.65rem;
+  }
+
+  .exam-modal-footer > * {
+    width: 100% !important;
+  }
+
+  .exam-modal-footer .modal-cancel-btn {
+    width: 100%;
+  }
+
+  /*
+    Grading
+  */
+
+  .grading-q-card {
+    padding: 0.75rem;
+
+    border-radius: 12px;
+  }
+
+  .grading-q-header {
+    gap: 0.35rem;
+  }
+
+  .q-number-pill,
+  .q-type-badge,
+  .q-score-tag {
+    font-size: 0.61rem;
+  }
+
+  .q-score-tag {
+    margin-right: 0;
+  }
+
+  .grading-q-text {
+    font-size: 0.78rem;
+
+    line-height: 1.95;
+  }
+
+  .student-ans-block {
+    padding: 0.7rem;
+  }
+
+  .ans-label {
+    font-size: 0.65rem;
+  }
+
+  .teacher-score-input-row {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 0.45rem;
+  }
+
+  .teacher-score-input-row label {
+    font-size: 0.7rem;
+  }
+
+  .q-score-input {
+    width: 100%;
+
+    height: 42px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .teacher-exams-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-exams-banner {
+    padding: 0.8rem;
+  }
+
+  .teacher-exams-main-section {
+    padding: 0.6rem;
+  }
+
+  .teacher-exams-table td {
+    padding: 0.55rem;
+  }
+
+  .exam-title-cell {
+    gap: 0.5rem;
+  }
+
+  .exams-icon-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .modal-table tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-table td,
+  .modal-table td:nth-child(n) {
+    width: 100%;
+    box-sizing: border-box;
+
+    grid-column: auto;
+
+    border-bottom: 1px solid #f0f2f4;
+  }
+
+  .modal-table td:last-child {
+    border-bottom: 0;
+  }
+
+  .modal-table td:nth-child(7) {
+    justify-content: stretch;
+  }
+
+  .modal-table td:nth-child(7) .exam-action-btn {
+    width: 100%;
+  }
+
+  .teacher-exams-table tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .teacher-exams-table td,
+  .teacher-exams-table td:nth-child(n) {
+    width: 100%;
+    box-sizing: border-box;
+
+    grid-column: auto;
+  }
+
+  .teacher-exams-table td:nth-child(8) {
+    border-bottom: 0;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY / TOUCH
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .exam-action-btn,
+  .modal-close-btn,
+  .modal-cancel-btn,
+  .roster-tab-btn {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .exam-action-btn {
+    min-height: 42px;
+  }
+
+  .modal-close-btn {
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+/* =========================================================
+   PREVENT ACCIDENTAL OVERFLOW
+========================================================= */
+
+.teacher-exams-page-container *,
+.teacher-exams-modal-root * {
+  box-sizing: border-box;
+}
+
+.teacher-exams-page-container img,
+.teacher-exams-modal-root img {
+  max-width: 100%;
+}
+
+.teacher-exams-page-container button,
+.teacher-exams-page-container input,
+.teacher-exams-page-container select,
+.teacher-exams-modal-root button,
+.teacher-exams-modal-root input,
+.teacher-exams-modal-root select {
+  max-width: 100%;
+}
+
+.teacher-exams-page-container,
+.teacher-exams-main-section,
+.teacher-exams-banner,
+.teacher-exams-modal-root,
+.exam-modal-container,
+.exam-modal-body {
+  overflow-wrap: anywhere;
+}

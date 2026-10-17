@@ -1,0 +1,1459 @@
+/* =========================================================
+   ADMIN PANEL
+   Mobile First / RTL / Fully Responsive
+========================================================= */
+
+.admin-panel-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+.admin-panel-page *,
+.admin-panel-page *::before,
+.admin-panel-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   TERM SELECTOR
+========================================================= */
+
+.term-selector-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+
+  width: 100%;
+  min-width: 0;
+
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+
+  background: #fff;
+  border: 1px solid #eceff3;
+  border-radius: 20px;
+
+  box-shadow: 0 6px 22px rgba(37, 41, 45, 0.04);
+}
+
+.term-banner-info {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.term-icon-circle-admin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+  min-width: 46px;
+
+  color: #fff;
+  background: var(--red-5, var(--primary));
+
+  border-radius: 14px;
+}
+
+.term-banner-content {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.term-banner-info h3 {
+  margin: 0;
+
+  color: #2d3436;
+
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+}
+
+.term-banner-info p {
+  margin: 0.2rem 0 0;
+
+  color: #7f8c8d;
+
+  font-size: 0.76rem;
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+}
+
+.term-highlight-text {
+  margin-right: 0.35rem;
+  color: var(--primary);
+}
+
+.term-dropdown-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+
+  flex: 0 1 340px;
+  min-width: 0;
+}
+
+.term-dropdown-wrapper label {
+  flex: 0 0 auto;
+
+  color: #2d3436;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.term-select-input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+
+  padding: 0.55rem 0.8rem;
+
+  color: #2d3436;
+  background: #f8f9fa;
+
+  border: 1px solid #e3e7eb;
+  border-radius: 11px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.term-select-input:hover {
+  background: #fff;
+  border-color: rgba(231, 76, 60, 0.25);
+}
+
+.term-select-input:focus {
+  background: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.08);
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.admin-panel-x7k2-stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 1rem;
+
+  width: 100%;
+  min-width: 0;
+
+  margin-bottom: 1.5rem;
+}
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.admin-panel-x7k2-section {
+  width: 100%;
+  min-width: 0;
+
+  margin-bottom: 1.5rem;
+  padding: 1.35rem;
+
+  background: #fff;
+
+  border: 1px solid #eceff3;
+  border-radius: 20px;
+
+  box-shadow: 0 8px 28px rgba(37, 41, 45, 0.045);
+}
+
+.admin-panel-x7k2-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  width: 100%;
+  min-width: 0;
+
+  margin-bottom: 1.15rem;
+  padding-bottom: 0.9rem;
+
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.admin-panel-section-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 0.65rem;
+
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.admin-panel-x7k2-section-title {
+  position: relative;
+
+  min-width: 0;
+
+  margin: 0;
+  padding-right: 0.85rem;
+
+  color: var(--primary);
+
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+}
+
+.admin-panel-x7k2-section-title::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  right: 0;
+
+  width: 4px;
+  height: 22px;
+
+  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+
+  border-radius: 999px;
+
+  transform: translateY(-50%);
+}
+
+.admin-panel-section-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  min-height: 25px;
+
+  padding: 0.2rem 0.55rem;
+
+  color: var(--primary);
+  background: #fff4f2;
+
+  border: 1px solid rgba(231, 76, 60, 0.1);
+  border-radius: 999px;
+
+  font-size: 0.67rem;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.admin-panel-section-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  min-height: 36px;
+
+  color: var(--primary);
+
+  font-size: 0.8rem;
+  font-weight: 800;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.admin-panel-section-link:hover {
+  opacity: 0.8;
+  transform: translateX(-3px);
+}
+
+.admin-panel-add-student-link {
+  display: inline-flex;
+
+  flex: 0 0 auto;
+
+  max-width: 100%;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   STUDENT TABLE - DESKTOP
+========================================================= */
+
+.admin-panel-x7k2-table-wrapper {
+  width: 100%;
+  min-width: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  border: 1px solid #eceff3;
+  border-radius: 15px;
+
+  background: #fff;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-panel-x7k2-table {
+  width: 100%;
+  min-width: 700px;
+
+  border-collapse: collapse;
+
+  direction: rtl;
+  text-align: right;
+}
+
+.admin-panel-x7k2-table thead {
+  background: #f8f9fa;
+  border-bottom: 2px solid #eceff3;
+}
+
+.admin-panel-x7k2-table th {
+  padding: 0.9rem 1rem;
+
+  color: #7f8c8d;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.admin-panel-x7k2-table td {
+  padding: 0.85rem 1rem;
+
+  color: #2d3436;
+
+  font-size: 0.84rem;
+
+  border-bottom: 1px solid #f1f2f6;
+
+  vertical-align: middle;
+}
+
+.admin-panel-x7k2-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.admin-panel-x7k2-table tbody tr:hover {
+  background: #fff9f8;
+}
+
+.admin-panel-x7k2-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.admin-panel-x7k2-student-name {
+  max-width: 210px;
+
+  overflow: hidden;
+
+  color: #2d3436;
+
+  font-weight: 800;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-panel-x7k2-student-phone {
+  display: inline-block;
+
+  color: #7f8c8d;
+
+  font-size: 0.8rem;
+
+  direction: ltr;
+  white-space: nowrap;
+}
+
+.admin-panel-x7k2-class-badge {
+  display: inline-flex;
+  align-items: center;
+
+  max-width: 220px;
+
+  padding: 0.3rem 0.65rem;
+
+  overflow: hidden;
+
+  color: #2d3436;
+  background: #f1f2f6;
+
+  border-radius: 8px;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-panel-x7k2-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 62px;
+
+  padding: 0.3rem 0.65rem;
+
+  border-radius: 999px;
+
+  font-size: 0.73rem;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.admin-panel-status-paid {
+  color: #2e8b57;
+  background: #edf8f1;
+  border: 1px solid #d9f0e1;
+}
+
+.admin-panel-status-pending {
+  color: #d88922;
+  background: #fff5e8;
+  border: 1px solid #f5dfbb;
+}
+
+.admin-panel-student-action-link {
+  display: inline-flex;
+
+  max-width: 100%;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   EMPTY / LOADING
+========================================================= */
+
+.admin-panel-loading-state,
+.admin-panel-empty-state {
+  min-height: 110px;
+
+  padding: 2rem 1rem;
+
+  color: #7f8c8d;
+
+  font-size: 0.82rem;
+
+  text-align: center;
+}
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.admin-panel-student-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.45rem;
+
+  width: 100%;
+
+  margin-top: 1.1rem;
+  padding-top: 0.9rem;
+
+  border-top: 1px solid #f0f1f3;
+
+  direction: rtl;
+}
+
+.admin-panel-pagination-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.3rem;
+
+  max-width: 100%;
+
+  overflow: hidden;
+}
+
+.admin-panel-pagination-btn,
+.admin-panel-pagination-page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  padding: 0;
+
+  color: var(--red-5, var(--primary));
+  background: #fff;
+
+  border: 1px solid #e4e7ea;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 0.77rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-panel-pagination-page:hover,
+.admin-panel-pagination-btn:hover:not(:disabled) {
+  color: var(--primary);
+
+  background: #fff8f7;
+
+  border-color: rgba(231, 76, 60, 0.2);
+
+  transform: translateY(-1px);
+}
+
+.admin-panel-pagination-page.active {
+  color: #fff;
+
+  background: var(--red-5, var(--primary));
+
+  border-color: var(--primary);
+
+  box-shadow: 0 5px 14px rgba(231, 76, 60, 0.18);
+}
+
+.admin-panel-pagination-btn:disabled {
+  opacity: 0.35;
+
+  cursor: not-allowed;
+
+  background: #f8f9fa;
+}
+
+.admin-panel-pagination-info {
+  margin-top: 0.6rem;
+
+  color: #98a0a5;
+
+  font-size: 0.69rem;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.admin-panel-pagination-info strong {
+  color: #626b71;
+  font-weight: 800;
+}
+
+/* =========================================================
+   BOTTOM GRID
+========================================================= */
+
+.admin-panel-x7k2-bottom-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 1.5rem;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.admin-panel-x7k2-bottom-grid .admin-panel-x7k2-section {
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   TEACHERS / CLASSES
+========================================================= */
+
+.admin-panel-teachers-list-container,
+.admin-panel-classes-list-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.65rem;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.admin-panel-teacher-row-card,
+.admin-panel-class-row-card {
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 0.75rem 0.9rem;
+
+  background: #fff;
+
+  border: 1px solid #eceff3;
+  border-radius: 15px;
+
+  text-decoration: none;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-panel-teacher-row-card:hover,
+.admin-panel-class-row-card:hover {
+  background: #fff9f8;
+
+  border-color: rgba(231, 76, 60, 0.25);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 18px rgba(231, 76, 60, 0.07);
+}
+
+.admin-panel-teacher-avatar-circle,
+.admin-panel-class-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  border-radius: 13px;
+}
+
+.admin-panel-teacher-avatar-circle {
+  color: #fff;
+  background: var(--red-5, var(--primary));
+
+  font-size: 1.05rem;
+  font-weight: 800;
+
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+}
+
+.admin-panel-class-icon-circle {
+  color: var(--primary);
+  background: #fff1ef;
+}
+
+.admin-panel-teacher-info-col,
+.admin-panel-class-info-col {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.1rem;
+
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.admin-panel-teacher-name-text,
+.admin-panel-class-name-text {
+  min-width: 0;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #2d3436;
+
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.6;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-panel-teacher-sub-text,
+.admin-panel-class-teacher-text {
+  display: block;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: #7f8c8d;
+
+  font-size: 0.74rem;
+  line-height: 1.6;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-panel-teacher-classes-pill,
+.admin-panel-class-capacity-badge {
+  flex: 0 0 auto;
+
+  max-width: 140px;
+
+  padding: 0.3rem 0.6rem;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-panel-teacher-classes-pill {
+  color: var(--primary);
+  background: #fff1ef;
+}
+
+.admin-panel-class-capacity-badge {
+  color: #3578c8;
+  background: #eef5ff;
+}
+
+.admin-panel-arrow-icon {
+  flex: 0 0 auto;
+
+  color: #bdc3c7;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-panel-teacher-row-card:hover .admin-panel-arrow-icon,
+.admin-panel-class-row-card:hover .admin-panel-arrow-icon {
+  color: var(--primary);
+
+  transform: translateX(-4px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .admin-panel-x7k2-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .term-selector-banner {
+    align-items: stretch;
+  }
+
+  .term-dropdown-wrapper {
+    flex: 0 1 320px;
+  }
+}
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+  .admin-panel-x7k2-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-panel-x7k2-bottom-grid .admin-panel-x7k2-section {
+    margin-bottom: 0;
+  }
+
+  .term-selector-banner {
+    flex-direction: column;
+  }
+
+  .term-banner-info {
+    width: 100%;
+  }
+
+  .term-dropdown-wrapper {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .term-select-input {
+    flex: 1 1 auto;
+  }
+}
+/* =========================================================
+   MOBILE SECTION HEADER
+   Desktop = بدون تغییر
+   Mobile = عنوان + دکمه در یک ردیف
+========================================================= */
+
+@media (max-width: 700px) {
+  /* =======================================================
+     SECTION HEADER
+     عنوان سمت راست
+     دکمه سمت چپ
+  ======================================================= */
+
+  .admin-panel-x7k2-section-header {
+    display: flex;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 0.65rem;
+
+    width: 100%;
+    min-width: 0;
+
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+  }
+
+  /* عنوان + count */
+  .admin-panel-section-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 0.45rem;
+
+    min-width: 0;
+    width: auto;
+
+    flex: 1 1 auto;
+
+    overflow: hidden;
+  }
+
+  .admin-panel-x7k2-section-title {
+    min-width: 0;
+
+    max-width: 100%;
+
+    margin: 0;
+
+    padding-right: 0.7rem;
+
+    font-size: 0.92rem;
+    line-height: 1.6;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .admin-panel-section-count {
+    flex: 0 0 auto;
+
+    min-height: 23px;
+
+    padding: 0.15rem 0.45rem;
+
+    font-size: 0.59rem;
+  }
+
+  /* =======================================================
+     BUTTON WRAPPER
+     دیگه width:100% نیست
+  ======================================================= */
+
+  .admin-panel-add-student-link,
+  .admin-panel-section-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: auto;
+    max-width: 48%;
+
+    min-width: 0;
+  }
+
+  .admin-panel-add-student-link > *,
+  .admin-panel-section-link > * {
+    width: auto;
+    max-width: 100%;
+  }
+
+  /* =======================================================
+     دکمه افزودن دانش‌آموز
+  ======================================================= */
+
+  .admin-panel-add-student-link .animated-btn {
+    max-width: 100%;
+
+    min-height: 38px;
+
+    padding: 0 11px;
+
+    font-size: 0.7rem;
+  }
+
+  /* =======================================================
+     دکمه‌های مدیریت معلمان / کلاس‌ها
+  ======================================================= */
+
+  .admin-panel-section-link .animated-btn {
+    min-height: 35px;
+
+    padding: 0 10px;
+
+    font-size: 0.68rem;
+
+    white-space: nowrap;
+  }
+
+  /* =======================================================
+     TABLE
+  ======================================================= */
+
+  .admin-panel-x7k2-table-wrapper {
+    overflow: visible;
+
+    border: 0;
+
+    background: transparent;
+  }
+
+  .admin-panel-x7k2-table,
+  .admin-panel-x7k2-table tbody,
+  .admin-panel-x7k2-table tr,
+  .admin-panel-x7k2-table td {
+    display: block;
+
+    width: 100%;
+  }
+
+  .admin-panel-x7k2-table {
+    min-width: 0;
+
+    border-collapse: separate;
+  }
+
+  .admin-panel-x7k2-table thead {
+    display: none;
+  }
+
+  .admin-panel-x7k2-table tbody {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.75rem;
+  }
+
+  .admin-panel-x7k2-table tbody tr {
+    position: relative;
+
+    padding: 0.85rem;
+
+    background: #fff;
+
+    border: 1px solid #eceff3;
+    border-radius: 15px;
+
+    box-shadow: 0 3px 12px rgba(37, 41, 45, 0.035);
+  }
+
+  .admin-panel-x7k2-table tbody tr:hover {
+    background: #fff;
+  }
+
+  .admin-panel-x7k2-table td {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 0.8rem;
+
+    min-height: 40px;
+
+    padding: 0.55rem 0;
+
+    border-bottom: 1px solid #f1f2f6;
+
+    font-size: 0.75rem;
+  }
+
+  .admin-panel-x7k2-table td:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+  }
+
+  .admin-panel-x7k2-table td::before {
+    content: attr(data-label);
+
+    flex: 0 0 auto;
+
+    color: #98a0a5;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+  }
+
+  .admin-panel-x7k2-table td:first-child {
+    padding-top: 0;
+  }
+
+  .admin-panel-x7k2-student-name {
+    max-width: 65%;
+
+    font-size: 0.8rem;
+  }
+
+  .admin-panel-x7k2-student-phone {
+    font-size: 0.72rem;
+  }
+
+  .admin-panel-x7k2-class-badge {
+    max-width: 65%;
+
+    font-size: 0.68rem;
+  }
+
+  .admin-panel-x7k2-status-badge {
+    min-width: 55px;
+
+    padding: 0.27rem 0.55rem;
+
+    font-size: 0.65rem;
+  }
+
+  .admin-panel-student-action-link {
+    width: auto;
+
+    max-width: 65%;
+
+    margin-right: auto;
+  }
+
+  .admin-panel-student-action-link > * {
+    width: auto;
+    max-width: 100%;
+  }
+
+  /* =======================================================
+     PAGINATION
+  ======================================================= */
+
+  .admin-panel-student-pagination {
+    gap: 0.3rem;
+
+    margin-top: 0.9rem;
+    padding-top: 0.8rem;
+
+    overflow: hidden;
+  }
+
+  .admin-panel-pagination-pages {
+    flex: 1 1 auto;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .admin-panel-pagination-pages::-webkit-scrollbar {
+    display: none;
+  }
+
+  .admin-panel-pagination-btn,
+  .admin-panel-pagination-page {
+    width: 35px;
+    height: 35px;
+
+    min-width: 35px;
+
+    border-radius: 9px;
+
+    font-size: 0.7rem;
+  }
+
+  .admin-panel-pagination-info {
+    font-size: 0.64rem;
+  }
+
+  /* =======================================================
+     TEACHERS / CLASSES
+  ======================================================= */
+
+  .admin-panel-teacher-row-card,
+  .admin-panel-class-row-card {
+    gap: 0.65rem;
+
+    padding: 0.7rem;
+
+    border-radius: 13px;
+  }
+
+  .admin-panel-teacher-avatar-circle,
+  .admin-panel-class-icon-circle {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+
+    border-radius: 11px;
+  }
+
+  .admin-panel-teacher-name-text,
+  .admin-panel-class-name-text {
+    font-size: 0.79rem;
+  }
+
+  .admin-panel-teacher-sub-text,
+  .admin-panel-class-teacher-text {
+    font-size: 0.67rem;
+  }
+
+  .admin-panel-teacher-classes-pill,
+  .admin-panel-class-capacity-badge {
+    max-width: 95px;
+
+    padding: 0.28rem 0.5rem;
+
+    font-size: 0.62rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .admin-panel-x7k2-section {
+    padding: 0.85rem;
+
+    border-radius: 15px;
+  }
+
+  /* -------------------------------------------------------
+     HEADER
+  ------------------------------------------------------- */
+
+  .admin-panel-x7k2-section-header {
+    gap: 0.45rem;
+
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .admin-panel-section-heading {
+    gap: 0.3rem;
+  }
+
+  .admin-panel-x7k2-section-title {
+    padding-right: 0.6rem;
+
+    font-size: 0.82rem;
+  }
+
+  .admin-panel-section-count {
+    min-height: 21px;
+
+    padding: 0.12rem 0.4rem;
+
+    font-size: 0.55rem;
+  }
+
+  /* دکمه */
+  .admin-panel-add-student-link {
+    max-width: 46%;
+  }
+
+  .admin-panel-add-student-link .animated-btn {
+    min-height: 36px;
+
+    padding: 0 8px;
+
+    font-size: 0.62rem;
+
+    gap: 5px;
+  }
+
+  .admin-panel-add-student-link .animated-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* مدیریت معلمان / کلاس‌ها */
+  .admin-panel-section-link {
+    max-width: 43%;
+  }
+
+  .admin-panel-section-link .animated-btn {
+    min-height: 34px;
+
+    padding: 0 8px;
+
+    font-size: 0.6rem;
+
+    gap: 4px;
+  }
+
+  /* -------------------------------------------------------
+     TABLE
+  ------------------------------------------------------- */
+
+  .admin-panel-x7k2-table tbody tr {
+    padding: 0.75rem;
+  }
+
+  .admin-panel-x7k2-table td {
+    min-height: 38px;
+
+    padding: 0.45rem 0;
+
+    gap: 0.5rem;
+  }
+
+  .admin-panel-x7k2-table td::before {
+    font-size: 0.63rem;
+  }
+
+  .admin-panel-x7k2-student-name {
+    max-width: 62%;
+
+    font-size: 0.75rem;
+  }
+
+  .admin-panel-x7k2-student-phone {
+    font-size: 0.68rem;
+  }
+
+  .admin-panel-x7k2-class-badge {
+    max-width: 62%;
+
+    font-size: 0.64rem;
+  }
+
+  .admin-panel-x7k2-status-badge {
+    min-width: 50px;
+
+    font-size: 0.61rem;
+  }
+
+  .admin-panel-pagination-btn,
+  .admin-panel-pagination-page {
+    width: 33px;
+    height: 33px;
+
+    min-width: 33px;
+  }
+
+  .admin-panel-teacher-classes-pill,
+  .admin-panel-class-capacity-badge {
+    display: none;
+  }
+
+  .admin-panel-arrow-icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .admin-panel-x7k2-section {
+    padding: 0.7rem;
+  }
+
+  .admin-panel-x7k2-section-header {
+    gap: 0.35rem;
+  }
+
+  .admin-panel-x7k2-section-title {
+    font-size: 0.77rem;
+  }
+
+  .admin-panel-section-count {
+    display: none;
+  }
+
+  /* دکمه‌ها جمع‌وجورتر */
+  .admin-panel-add-student-link {
+    max-width: 44%;
+  }
+
+  .admin-panel-add-student-link .animated-btn {
+    min-height: 34px;
+
+    padding: 0 7px;
+
+    font-size: 0.57rem;
+  }
+
+  .admin-panel-add-student-link .animated-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .admin-panel-section-link {
+    max-width: 42%;
+  }
+
+  .admin-panel-section-link .animated-btn {
+    min-height: 32px;
+
+    padding: 0 7px;
+
+    font-size: 0.56rem;
+  }
+
+  .admin-panel-x7k2-table tbody {
+    gap: 0.6rem;
+  }
+
+  .admin-panel-x7k2-table tbody tr {
+    padding: 0.7rem;
+  }
+
+  .admin-panel-x7k2-student-name {
+    max-width: 58%;
+
+    font-size: 0.71rem;
+  }
+
+  .admin-panel-x7k2-student-phone {
+    font-size: 0.64rem;
+  }
+
+  .admin-panel-x7k2-class-badge {
+    max-width: 58%;
+
+    font-size: 0.6rem;
+  }
+
+  .admin-panel-x7k2-status-badge {
+    min-width: 46px;
+
+    font-size: 0.58rem;
+  }
+
+  .admin-panel-pagination-info {
+    font-size: 0.59rem;
+  }
+
+  .admin-panel-teacher-row-card,
+  .admin-panel-class-row-card {
+    padding: 0.6rem;
+  }
+
+  .admin-panel-teacher-avatar-circle,
+  .admin-panel-class-icon-circle {
+    width: 37px;
+    height: 37px;
+
+    min-width: 37px;
+  }
+
+  .admin-panel-teacher-name-text,
+  .admin-panel-class-name-text {
+    font-size: 0.73rem;
+  }
+
+  .admin-panel-teacher-sub-text,
+  .admin-panel-class-teacher-text {
+    font-size: 0.61rem;
+  }
+}
+
+/* =========================================================
+   ULTRA SMALL
+========================================================= */
+
+@media (max-width: 330px) {
+  .admin-panel-x7k2-section-header {
+    gap: 0.25rem;
+  }
+
+  .admin-panel-x7k2-section-title {
+    font-size: 0.72rem;
+  }
+
+  .admin-panel-add-student-link .animated-btn {
+    min-height: 32px;
+
+    padding: 0 6px;
+
+    font-size: 0.53rem;
+  }
+
+  .admin-panel-section-link .animated-btn {
+    min-height: 30px;
+
+    padding: 0 6px;
+
+    font-size: 0.52rem;
+  }
+
+  .admin-panel-pagination-btn,
+  .admin-panel-pagination-page {
+    width: 31px;
+    height: 31px;
+
+    min-width: 31px;
+
+    border-radius: 8px;
+  }
+}
