@@ -62,7 +62,17 @@ export default function Login() {
           <div className="login-brand">
 
             <div className="brand-icon">
-              🎯
+              <img
+                src={siteConfig.logoPath || "/logo.png"}
+                alt={siteConfig.instituteName}
+                style={{
+                  width: "68px",
+                  height: "68px",
+                  objectFit: "contain",
+                  borderRadius: "18px",
+                  boxShadow: "0 8px 24px rgba(79, 70, 229, 0.25)",
+                }}
+              />
             </div>
 
             <div className="brand-content">

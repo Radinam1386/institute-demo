@@ -2,12 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Landing.css";
 import { AnimatedButton } from "../components/AnimatedButton";
+import { siteConfig } from "../config/siteConfig";
 
 const TYPING_TEXTS = ["انگلیسی", "English", "برای IELTS", "برای TOEFL"];
 const STATS = [
   { value: 1967, suffix: "+", label: "دانش‌آموز موفق" },
   { value: 99, suffix: "%", label: "رضایت دانش‌آموزان" },
-  { value: 18, suffix: "+", label: "سال تجربه" },
+  { value: siteConfig.experienceYearsNumber || 10, suffix: "+", label: "سال تجربه" },
 ];
 
 const FEATURES = [
@@ -138,10 +139,9 @@ export default function Landing() {
             </h1>
 
             <p className="hero-desc reveal" ref={r}>
-              بیش از ۱۸ سال تجربه در آموزش زبان انگلیسی با کلاس‌های خصوصی و
-              نیمه‌خصوصی.
+              آموزش تخصصی زبان انگلیسی با کلاس‌های خصوصی و نیمه‌خصوصی.
               <br />
-              از مقدماتی تا پیشرفته، با تضمین نتیجه.
+              از مقدماتی تا پیشرفته، با جدیدترین متدهای آموزشی و استانداردهای روز.
             </p>
 
             <div className="hero-cta reveal" ref={r}>

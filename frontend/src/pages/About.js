@@ -25,7 +25,7 @@ function About() {
               <div className="story-img-wrap">
                 <img className="story-img-placeholder" src={siteConfig.logoPath || "/logo.png"} alt={siteConfig.instituteName} />
                 <div className="story-badge">
-                  <span className="badge-num">۱۸+</span>
+                  <span className="badge-num">{siteConfig.experienceYears}</span>
                   <span className="badge-lbl">سال تجربه</span>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 {
-  "name": "kish_institute",
+  "name": "demo-language-academy",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:8000",

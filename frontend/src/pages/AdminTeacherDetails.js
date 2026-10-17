@@ -785,9 +785,7 @@ function AdminTeacherDetails() {
 
             <header class="header">
               <div class="brand">
-                <div class="brand-logo">
-                  K
-                </div>
+                <img class="brand-logo" src="/logo.png" alt="لوگو" />
 
                 <div>
                   <h1>

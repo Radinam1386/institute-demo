@@ -315,7 +315,7 @@ function AdminSecretaryForm() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="secretary@kish.edu"
+                    placeholder="secretary@demo.example"
                   />
                 </div>
 

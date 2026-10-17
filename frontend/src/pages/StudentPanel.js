@@ -210,7 +210,7 @@ function StudentPanel() {
       } else {
         // Check if student has started this exam
         const userId = currentUser?.id || "guest";
-        const startTimeStr = localStorage.getItem(`kish_exam_start_time_${exam.id}_${userId}`);
+        const startTimeStr = localStorage.getItem(`demo_exam_start_time_${exam.id}_${userId}`);
         if (startTimeStr) {
           const durMinutes = Number(exam.duration_minutes) || 45;
           const durSeconds = durMinutes * 60;

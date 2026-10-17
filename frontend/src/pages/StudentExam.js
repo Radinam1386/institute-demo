@@ -25,8 +25,8 @@ function StudentExam() {
   const currentUser = storage.getUser();
   const userId = currentUser?.id || "guest";
 
-  const storageKey = `kish_exam_start_time_${examId}_${userId}`;
-  const draftKey = `kish_exam_draft_answers_${examId}_${userId}`;
+  const storageKey = `demo_exam_start_time_${examId}_${userId}`;
+  const draftKey = `demo_exam_draft_answers_${examId}_${userId}`;
 
   const [answers, setAnswers] = useState({});
   const [exam, setExam] = useState(null);

@@ -30,7 +30,7 @@ function getEntityId(value) {
 
 function getStudentIdFromSession() {
   try {
-    const storedUser = localStorage.getItem("kish_auth_user");
+    const storedUser = localStorage.getItem("demo_auth_user");
 
     if (!storedUser) {
       return null;

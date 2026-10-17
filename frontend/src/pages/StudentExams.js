@@ -375,7 +375,7 @@ function StudentExams() {
 
             const startTimeStr =
               localStorage.getItem(
-                `kish_exam_start_time_${exam.id}_${userId}`,
+                `demo_exam_start_time_${exam.id}_${userId}`,
               );
 
             if (startTimeStr) {

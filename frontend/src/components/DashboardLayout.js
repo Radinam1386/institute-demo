@@ -175,7 +175,7 @@ function DashboardLayout({ role, title, children, menuType }) {
       <aside className={`dashboard-sidebar ${sidebarOpen ? "open" : ""}`}>
         <div className="dashboard-brand">
           <div className="brand-flex">
-            <img src="/logo.png" className="brand-logo" alt={siteConfig.instituteName} />
+            <img src={siteConfig.logoPath || "/logo.png"} className="brand-logo" alt={siteConfig.instituteName} />
             <div className="brand-text">
               <strong>{siteConfig.instituteName}</strong>
               <small>{role}</small>

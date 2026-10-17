@@ -380,6 +380,7 @@ exams
           });
         }
       });
+      submission.total_score = answerTotal;
       submissions.push(submission);
     });
   });

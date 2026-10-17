@@ -37,7 +37,7 @@ function getEntityId(value) {
 
 function getCurrentUser() {
   try {
-    const raw = localStorage.getItem("kish_auth_user");
+    const raw = localStorage.getItem("demo_auth_user");
 
     if (!raw) {
       return null;

@@ -23,6 +23,8 @@ export const siteConfig = {
     "مرکز آموزش زبان انگلیسی — نسخه نمایشی",
   shortName: env.REACT_APP_INSTITUTE_SHORT_NAME || "نمونه",
   logoPath: env.REACT_APP_LOGO_PATH || "/logo.png",
+  experienceYears: env.REACT_APP_EXPERIENCE_YEARS || "۱۰+",
+  experienceYearsNumber: Number(env.REACT_APP_EXPERIENCE_YEARS_NUMBER) || 10,
 
   /* ------------------------------------------------ تماس و آدرس */
   phones: [
